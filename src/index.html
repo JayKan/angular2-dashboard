@@ -1,0 +1,61 @@
+<!doctype HTML>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Angular2 admin dashboard">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Angular2 admin dashboard</title>
+  <base href="/">
+  <link href="//fonts.googleapis.com/css?family=Roboto+Mono:400,400italic,500,500italic,700,700italic|Roboto:400,400italic,500,500italic,700,700italic|Material+Icons" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" >
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <!-- IE required polyfills (from CDN), in this exact order -->
+  <!-- inject:css -->
+  <!-- endinject -->
+</head>
+<body>
+
+<h1>Angular2 admin dashboard</h1>
+
+<script>
+  // function.name (all IE)
+  // Remove once https://github.com/angular/angular/issues/6501 is fixed.
+  /*! @source http://stackoverflow.com/questions/6903762/function-name-not-supported-in-ie*/
+  if (!Object.hasOwnProperty('name')) {
+    Object.defineProperty(Function.prototype, 'name', {
+      get: function() {
+        var matches = this.toString().match(/^\s*function\s*(\S*)\s*\(/);
+        var name = matches && matches.length > 1 ? matches[1] : "";
+        // For better performance only parse once, and then cache the
+        // result through a new accessor for repeated access.
+        Object.defineProperty(this, 'name', {value: name});
+        return name;
+      }
+    });
+  }
+</script>
+<!-- shims:js -->
+<!-- endinject -->
+
+<script>
+  System.config({
+    "defaultJSExtensions": true,
+    "transpiler": "typescript",
+    "map": {
+      "rxjs": "/node_modules/rxjs/Rx.js"
+    }
+  });
+</script>
+
+<!-- libs:js -->
+<!-- endinject -->
+
+<!-- inject:js -->
+<!-- endinject -->
+
+<!--<script>-->
+  <!--System.import('bootstrap').then(null, console.error.bind(console));-->
+<!--</script>-->
+</body>
+</html>
