@@ -1,0 +1,105 @@
+.registration-page {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: auto;
+    background: #2c3e50;
+    text-align: center;
+    color: #fff;
+    padding: 3em;
+}
+
+.profile-avatar {
+    border-radius: 50%;
+    width: 125px;
+    height: 125px;
+}
+
+.registration-page .col-lg-4 {
+    padding: 0;
+}
+
+.registration-page a {
+    cursor: pointer;
+}
+
+.registration-page .input-lg {
+    height: 46px;
+    padding: 10px 16px;
+    font-size: 18px !important;
+    line-height: 1.3333333;
+    border-radius: 0;
+}
+
+.registration-page .input-underline {
+    background: 0 0;
+    border: none;
+    box-shadow: none;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+    color: #FFF;
+    border-radius: 0;
+}
+
+.registration-page .input-underline:focus {
+    border-bottom: 2px solid #fff;
+    box-shadow: none;
+}
+
+.registration-page .rounded-btn {
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    color: rgba(255, 255, 255, 0.8);
+    background: #2c3e50;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    font-size: 18px;
+    line-height: 40px;
+    padding: 0 25px;
+}
+
+.registration-page .rounded-btn:hover,
+.registration-page .rounded-btn:focus,
+.registration-page .rounded-btn:active,
+.registration-page .rounded-btn:visited {
+    color: white;
+    border: 2px solid white;
+    outline: none;
+}
+
+.registration-page h1 {
+    font-weight: 100;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 40px;
+}
+
+.registration-page h1 small {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.registration-page .form-group {
+    padding: 8px 0;
+}
+
+.registration-page .form-group input::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, 0.6) !important;
+}
+
+.registration-page .form-group input:-moz-placeholder {
+    /* Firefox 18- */
+    color: rgba(255, 255, 255, 0.6) !important;
+}
+
+.registration-page .form-group input::-moz-placeholder {
+    /* Firefox 19+ */
+    color: rgba(255, 255, 255, 0.6) !important;
+}
+
+.registration-page .form-group input:-ms-input-placeholder {
+    color: rgba(255, 255, 255, 0.6) !important;
+}
+
+.registration-page .form-content {
+    padding: 40px 0;
+}
