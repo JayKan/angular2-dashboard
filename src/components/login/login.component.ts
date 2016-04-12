@@ -32,7 +32,6 @@ import { Router } from 'angular2/router';
 export class LoginComponent {
 
   constructor(private _router: Router) {}
-  
 
   navigateTo(instruction): void {
     this._router.navigate(instruction);

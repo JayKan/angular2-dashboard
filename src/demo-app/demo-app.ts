@@ -4,6 +4,7 @@ import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from 'angular2/route
 import { LoginComponent } from '../components/login/login';
 import { RegistrationComponent } from '../components/registration/registartion';
 
+
 @Component({
   selector: 'demo-app',
   template: `  
