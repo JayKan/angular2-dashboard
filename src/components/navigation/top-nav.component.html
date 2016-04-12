@@ -1,0 +1,193 @@
+<nav class="navbar topnav-navbar navbar-fixed-top">
+  <button id="sidebar-toggler" class="hidden-md-up" type="button" (click)="sidebarToggler()">
+    &#9776;
+  </button>
+  <a class="hidden-md-up theme-name" href="Javascript:void(0);" (click)="gotoHome()">Top navigation</a>
+  <div class="collapse navbar-toggleable-sm">
+    <a class="navbar-brand" href="Javascript:void(0);"(click)="gotoHome()">Top navigation</a>
+    <ul class="nav navbar-nav">
+      <li class="nav-item active">
+        <form class="navbar-form navbar-left" role="search">
+          <i class="fa fa-search"></i>
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="">
+          </div>
+        </form>
+      </li>
+      <li class="nav-item">
+        <div class="btn-group message" dropdown>
+          <a id="messages-top" dropdownToggle>
+            <i class="fa fa-envelope"></i><span class="label label-pill label-success">5</span>
+          </a>
+          <ul class="dropdown-menu" role="menu" aria-labelledby="messages-top">
+            <li class="dropdown-item messages-header text-center">
+              You have 4 unread messages.
+            </li><li class="divider dropdown-divider"></li>
+            <li class="dropdown-messages">
+              <a href="Javascript:void(0)">
+                <div class="message-sender">
+                  Lucy Chandler
+                </div>
+                <div class="message-header">
+                  Send you a friend request.
+                </div>
+              </a>
+            </li>
+            <li class="dropdown-messages">
+              <a href="Javascript:void(0)">
+                <div class="message-sender">
+                  Dipesh Mishra
+                </div>
+                <div class="message-header">
+                  Asked you to join strapui.
+                </div>
+              </a>
+            </li>
+            <li class="dropdown-messages">
+              <a href="Javascript:void(0)">
+                <div class="message-sender">
+                  Wang Xiao
+                </div>
+                <div class="message-header">
+                  Congratulations! your account is activated.
+                </div>
+              </a>
+            </li>
+            <li class="dropdown-messages">
+              <a href="Javascript:void(0)">
+                <div class="message-sender">
+                  Jade Mullick
+                </div>
+                <div class="message-header">
+                  Lets have a meeting at 5:00pm.
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </li>
+      <li class="nav-item">
+        <div class="btn-group message" dropdown>
+          <a id="messages-top" dropdownToggle>
+            <i class="fa fa-bell"></i><span class="label label-pill label-danger">5</span>
+          </a>
+          <ul class="dropdown-menu" role="menu" aria-labelledby="messages-top">
+            <li class="dropdown-item messages-header text-center">
+              You have 3 new notifications.
+            </li><li class="divider dropdown-divider"></li>
+            <li class="dropdown-messages">
+              <a href="Javascript:void(0)">
+                <div class="notification">
+                  <i class="fa fa-thumbs-up"></i> Runuma Das liked your photo.
+                </div>
+              </a>
+            </li>
+            <li class="dropdown-messages">
+              <a href="Javascript:void(0)">
+                <div class="notification">
+                  <i class="fa fa-thumbs-up"></i> Runuma Das liked your photo.
+                </div>
+              </a>
+            </li>
+            <li class="dropdown-messages">
+              <a href="Javascript:void(0)">
+                <div class="notification">
+                  <i class="fa fa-thumbs-up"></i> Runuma Das liked your photo.
+                </div>
+              </a>
+            </li>
+            <li class="dropdown-messages">
+              <a href="Javascript:void(0)">
+                <div class="notification">
+                  <i class="fa fa-thumbs-up"></i> Runuma Das liked your photo.
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+    <ul class="nav navbar-nav pull-right navbar-right">
+      <li class="nav-item">
+        <a class="btn btn-primary btn-rounded pull-right btn-bordered hidden-md-down buy-now" href="http://www.strapui.com/themes/ani-angularjs-theme/">Buy Now</a>
+      </li>
+      <li class="nav-item pull-right color-picker">
+        <div class="btn-group message" dropdown>
+          <a href class="dropdown-toggle notoggle" dropdownToggle id="color-selector">
+            <span><i class="fa fa-circle"></i></span>
+          </a>
+          <ul class="dropdown-menu pull-right animated fadeIn" aria-labelledby="color-selector">
+            <li class="padder-h-xs">
+              <table class="table color-swatches-table text-center no-m-b">
+                <tr>
+                  <td class="text-center colorr">
+                    <a (click)="changeTheme('blue')" class="theme-picker">
+                      <i class="fa fa-circle blue-base"></i>
+                    </a>
+                  </td>
+                  <td class="text-center colorr">
+                    <a (click)="changeTheme('green')" class="theme-picker">
+                      <i class="fa fa-circle green-base"></i>
+                    </a>
+                  </td>
+                  <td class="text-center colorr">
+                    <a (click)="changeTheme('red')" class="theme-picker">
+                      <i class="fa fa-circle red-base"></i>
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-center colorr">
+                    <a (click)="changeTheme('purple')" class="theme-picker">
+                      <i class="fa fa-circle purple-base"></i>
+                    </a>
+                  </td>
+                  <td class="text-center colorr">
+                    <a (click)="changeTheme('midnight-blue')" class="theme-picker">
+                      <i class="fa fa-circle midnight-blue-base"></i>
+                    </a>
+                  </td>
+                  <td class="text-center colorr">
+                    <a (click)="changeTheme('lynch')" class="theme-picker">
+                      <i class="fa fa-circle lynch-base"></i>
+                    </a>
+                  </td>
+                </tr>
+              </table>
+            </li>
+          </ul>
+        </div>
+      </li>
+      <li class="nav-item rtl-ltr">
+        <a href="javascript:void(0)" (click)="rtl()">
+          <span> LTR/RTL </span>
+        </a>
+      </li>
+      <li class="nav-item profile">
+        <div class="btn-group" dropdown>
+          <a dropdownToggle>
+            <img src="assets/images/flat-avatar.png" class="topnav-img" alt=""> <span class="hidden-md-down">Ani Pascal</span>
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="lang">
+            <li role="menuitem"><a class="dropdown-item" href="javascript:void(0)" (click)="gotoProfile()">Profile</a></li>
+            <li role="menuitem"><a class="dropdown-item" href="javascript:void(0)" (click)="gotoLogin()">Logout</a></li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <ul class="nav navbar-nav pull-right hidden-md-up hidd">
+    <li class="nav-item profile-xs">
+      <div dropdown>
+        <a dropdownToggle>
+          <img src="assets/images/flat-avatar.png" class="topnav-img" alt="">
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="lang">
+          <li role="menuitem"><a class="dropdown-item" href="javascript:void(0)" (click)="gotoProfile()">Profile</a></li>
+          <li class="divider dropdown-divider"></li>
+          <li role="menuitem"><a class="dropdown-item" href="javascript:void(0)" (click)="gotoLogin()">Logout</a></li>
+        </ul>
+      </div>
+    </li>
+  </ul>
+</nav>

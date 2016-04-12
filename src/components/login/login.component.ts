@@ -19,7 +19,7 @@ import { Router } from 'angular2/router';
                 <input type="password" class="form-control input-underline input-lg" placeholder="Password">
               </div>
             </div>
-            <a class="btn rounded-btn" (click)="navigateTo(['Login'])">Log in</a>				
+            <a class="btn rounded-btn" (click)="navigateTo(['Dashboard'])">Log in</a>				
             &nbsp;
             <a type="submit" class="btn rounded-btn" (click)="navigateTo(['Registration'])">Register</a>
           </form>

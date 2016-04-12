@@ -3,7 +3,7 @@ import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from 'angular2/route
 
 import { LoginComponent } from '../components/login/login';
 import { RegistrationComponent } from '../components/registration/registartion';
-
+import { DashboardComponent } from '../dashboard/dashboard';
 
 @Component({
   selector: 'demo-app',
@@ -16,8 +16,9 @@ import { RegistrationComponent } from '../components/registration/registartion';
 })
 
 @RouteConfig([
-  { path: '/login', component: LoginComponent, name: 'Login', useAsDefault: true  },
-  { path: '/registration', component: RegistrationComponent, name: 'Registration' }
+  { path: '/login',         component: LoginComponent,          name: 'Login',        useAsDefault: true  },
+  { path: '/registration',  component: RegistrationComponent,   name: 'Registration'                      },
+  { path: '/dashboard',     component: DashboardComponent,      name: 'Dashboard'                         }
 ])
 export class DemoApp {
   
