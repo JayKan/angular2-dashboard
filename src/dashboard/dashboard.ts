@@ -14,6 +14,21 @@ import { TopNavComponent, SideNavComponent } from '../components/navigation/navi
   `,
   directives: [ROUTER_DIRECTIVES, TopNavComponent, SideNavComponent],
   encapsulation: ViewEncapsulation.None,
+  styles: [`
+     .main-container {
+        margin-left: 235px;
+        margin-top: 50px;
+        padding: 10px;
+        transition: all .2s ease-in-out;
+        overflow: hidden;
+        background: #ECF0F1;
+     }
+     @media screen and (max-width: 768px) {
+        .main-container {
+          margin-left: 0 !important;
+        }
+     }
+  `]
 })
 
 // @RouteConfig([
