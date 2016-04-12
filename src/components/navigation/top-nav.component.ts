@@ -9,6 +9,8 @@ import { CORE_DIRECTIVES } from 'angular2/common';
 })
 
 export class TopNavComponent {
-  constructor(private _router: Router) {}
+  constructor(private _router: Router) {
+    
+  }
   
 }
