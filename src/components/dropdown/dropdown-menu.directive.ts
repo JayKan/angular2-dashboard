@@ -3,8 +3,10 @@ import { Dropdown } from './dropdown.directive';
 
 @Directive({selector: '[dropdownMenu]'})
 export class DropdownMenu implements OnInit {
-  
-  ngOnInit(): void {
+  constructor( @Host() public dropdown: Dropdown, public el: ElementRef) {
     
+  }
+  ngOnInit(): void {
+    this.dropdown.dropDownMenu = this;
   }
 }
