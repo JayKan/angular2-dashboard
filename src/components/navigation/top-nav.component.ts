@@ -193,8 +193,6 @@ import { DROPDOWN_DIRECTIVES } from '../dropdown/dropdown';
         color: rgba(255, 255, 255, 0.7);
     }
     
-   
-    
     .topnav-navbar .collapse .navbar-nav .profile {
         margin-right: 10px;
     }
@@ -267,13 +265,11 @@ import { DROPDOWN_DIRECTIVES } from '../dropdown/dropdown';
       box-shadow: 0 6px 12px rgba(0,0,0,.175);      
     }
     
-   
     .navbar.topnav-navbar .navbar-toggleable-sm .nav {
       padding-left: 0;
       margin-bottom: 0;
       list-style: none;
     }
-    
  
     @media screen and (max-width: 768px) {
       .theme-name {
