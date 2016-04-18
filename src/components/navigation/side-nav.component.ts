@@ -1,5 +1,7 @@
-import { Component, ViewEncapsulation } from 'angular2/core';
+import { Component, ViewEncapsulation, ElementRef, OnInit } from 'angular2/core';
 import { ROUTER_DIRECTIVES } from 'angular2/router';
+
+declare var jQuery: any;
 
 @Component({
   selector: 'side-nav',
@@ -256,6 +258,17 @@ import { ROUTER_DIRECTIVES } from 'angular2/router';
   ]
 })
 
-export class SideNavComponent {
-  constructor(){}
+export class SideNavComponent implements OnInit {
+  constructor(private _el: ElementRef){}
+  
+  ngOnInit(): void {
+    let element = jQuery(this._el.nativeElement).find('#sidebar');
+    let mainContainer = jQuery('.main-container');
+    jQuery(window).bind('resize', function() {
+      if (jQuery(this).width() < 769 && element.hasClass('sidebar-left-zero')) {
+        element.removeClass('sidebar-left-zero');
+        mainContainer.removeClass('main-container-ml-zero');
+      }
+    });
+  }
 }
