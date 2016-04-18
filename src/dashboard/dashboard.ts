@@ -6,7 +6,7 @@ import { TopNavComponent, SideNavComponent } from '../components/navigation/navi
   selector: 'dashboard',
   template: `
     <top-nav></top-nav>
-   
+    <side-nav></side-nav>
     <section class="main-container">
       <h1>View Component Content</h1>
       <!--<router-outlet></router-outlet>-->
