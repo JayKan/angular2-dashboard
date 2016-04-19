@@ -1,15 +1,15 @@
 import { Component, ViewEncapsulation } from 'angular2/core';
 import { RouteConfig, ROUTER_DIRECTIVES } from 'angular2/router';
 import { TopNavComponent, SideNavComponent } from '../components/navigation/navigation';
+import { Home } from '../pages/home/home';
 
 @Component({
   selector: 'dashboard',
   template: `
     <top-nav></top-nav>
     <side-nav></side-nav>
-    <section class="main-container">
-      <h1>View Component Content</h1>
-      <!--<router-outlet></router-outlet>-->
+    <section class="main-container">     
+      <router-outlet></router-outlet>
     </section>
   `,
   directives: [ROUTER_DIRECTIVES, TopNavComponent, SideNavComponent],
@@ -31,9 +31,9 @@ import { TopNavComponent, SideNavComponent } from '../components/navigation/navi
   `]
 })
 
-// @RouteConfig([
-  // { path: '/', component: HomeComponent, name: 'Home', use}
-// ])
+@RouteConfig([
+  { path: '/', component: Home, name: 'Home', useAsDefault: true }
+])
 export class DashboardComponent {
   constructor() {
 

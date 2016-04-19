@@ -18,7 +18,7 @@ import { DashboardComponent } from '../dashboard/dashboard';
 @RouteConfig([
   { path: '/login',         component: LoginComponent,          name: 'Login',        useAsDefault: true  },
   { path: '/registration',  component: RegistrationComponent,   name: 'Registration'                      },
-  { path: '/dashboard',     component: DashboardComponent,      name: 'Dashboard'                         }
+  { path: '/dashboard/...', component: DashboardComponent,  name: 'Dashboard'                             }
 ])
 export class DemoApp {
   
