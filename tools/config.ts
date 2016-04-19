@@ -3,11 +3,12 @@ import { argv } from 'yargs';
 
 // --------------
 // Configuration.
-
 const ENVIRONMENTS = {
   DEVELOPMENT: 'dev',
   PRODUCTION: 'prod'
 };
+
+const BOWER_COMPONENTS      = 'bower_components';
 
 
 export const TOOLS_DIR      = 'tools';
@@ -38,15 +39,22 @@ export const APP_ASSETS: InjectableDependency[] = [
 
 // Declare NPM dependencies (Note that globs should not be injected).
 export const DEV_NPM_DEPENDENCIES: InjectableDependency[] = normalizeDependencies([
-  { src: 'systemjs/dist/system-polyfills.src.js', inject: 'shims', dest: JS_DEST    },
-  { src: 'systemjs/dist/system.src.js', inject: 'shims', dest: JS_DEST              },
-  { src: 'reflect-metadata/Reflect.js', inject: 'shims', dest: JS_DEST              },
-  { src: 'es6-shim/es6-shim.js', inject: 'shims', dest: JS_DEST                     },
-  { src: 'rxjs/bundles/Rx.js', inject: 'libs', dest: JS_DEST                        },
-  { src: 'angular2/bundles/angular2-polyfills.js', inject: 'shims', dest: JS_DEST   },
-  { src: 'angular2/bundles/angular2.js',  inject: 'libs', dest: JS_DEST             },
-  { src: 'angular2/bundles/router.js',    inject: 'libs', dest: JS_DEST             },
-  { src: 'angular2/bundles/http.js',      inject: 'libs', dest: JS_DEST             },
+  { src: 'systemjs/dist/system-polyfills.src.js',   inject: 'shims',  dest: JS_DEST  },
+  { src: 'systemjs/dist/system.src.js',             inject: 'shims',  dest: JS_DEST  },
+  { src: 'reflect-metadata/Reflect.js',             inject: 'shims',  dest: JS_DEST  },
+  { src: 'es6-shim/es6-shim.js',                    inject: 'shims',  dest: JS_DEST  },
+  { src: 'angular2/bundles/angular2-polyfills.js',  inject: 'shims',  dest: JS_DEST  },
+  { src: 'rxjs/bundles/Rx.js',                      inject: 'libs',   dest: JS_DEST  },
+  { src: 'angular2/bundles/angular2.js',            inject: 'libs',   dest: JS_DEST  },
+  { src: 'angular2/bundles/router.js',              inject: 'libs',   dest: JS_DEST  },
+  { src: 'angular2/bundles/http.js',                inject: 'libs',   dest: JS_DEST  },
+  { src: 'jquery/dist/jquery.min.js',               inject: 'libs',   dest: JS_DEST  },
+  { src: 'moment/min/moment.min.js',                inject: 'libs',   dest: JS_DEST  },
+  { src: 'fullcalendar/dist/fullcalendar.js',       inject: 'libs',   dest: JS_DEST  },
+  { src: 'fullcalendar/dist/fullcalendar.css',      inject: true,     dest: CSS_DEST },
+  { src: 'c3/c3.css',                               inject: true,     dest: CSS_DEST },
+  { src: 'c3/node_modules/d3/d3.js',                inject: 'libs',   dest: JS_DEST  },
+  { src: 'c3/c3.js',                                inject: 'libs',   dest: JS_DEST  }
 ]);
 
 export const PROD_NPM_DEPENDENCIES: InjectableDependency[] = normalizeDependencies([
