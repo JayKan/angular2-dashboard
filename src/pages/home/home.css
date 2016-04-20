@@ -1,0 +1,27 @@
+.card-block {
+    padding: 0.875rem;
+}
+.text-primary {
+    color: #2c3e50 !important;
+}
+.text-success {
+    color: #5cb85c !important;
+}
+.text-warning {
+    color: #f0ad4e !important;
+}
+.margin-right-5 {
+    margin-right: 5px;
+}
+.chart-comment b {
+    font-weight: 500;
+}
+#pieChart svg .c3-chart .c3-chart-arcs .c3-target text {
+    display: none;
+}
+.jqvmap-zoomin, .jqvmap-zoomout {
+    background: #2c3e50;
+    padding: 3px;
+    width: 15px;
+    height: 15px;
+}
