@@ -1,0 +1,20 @@
+{
+  "name": "angular2-dashboard",
+  "version": "0.0.0",
+  "homepage": "https://github.com/JayKan/angular2-dashboard",
+  "authors": [
+    "Jay Kan <jay.kan@matrixcos.com>"
+  ],
+  "description": "Angular2 admin dashboard application",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jqvmap": "^1.5.0"
+  }
+}
