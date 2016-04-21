@@ -1,5 +1,7 @@
 import { Component, ViewEncapsulation, ElementRef, OnInit } from 'angular2/core';
-import { ROUTER_DIRECTIVES } from 'angular2/router';
+import { ROUTER_DIRECTIVES, Router } from 'angular2/router';
+import { CalendarWidget } from '../calendar/calendar';
+import { UserProfileWidget, NewsFeedWidget } from '../user/user';
 
 declare var jQuery: any;
 
@@ -7,7 +9,12 @@ declare var jQuery: any;
   selector: 'side-nav',
   encapsulation: ViewEncapsulation.None,
   templateUrl: 'components/navigation/side-nav.component.html',
-  directives: [ROUTER_DIRECTIVES],
+  directives: [
+    ROUTER_DIRECTIVES, 
+    CalendarWidget, 
+    UserProfileWidget,
+    NewsFeedWidget
+  ],
   styles: [`
     .sidebar-left-zero {
         left: 0 !important;
@@ -32,13 +39,7 @@ declare var jQuery: any;
         transition: all .2s ease-in-out;        
     }
     
-    #sidebar .profile-icon {
-        border-radius: 50%;
-    }
     
-    #sidebar a {
-        cursor: pointer;
-    }
     #sidebar .sidenav-outer {
         position: absolute;
         top: 50px;
@@ -99,6 +100,11 @@ declare var jQuery: any;
         height: 44px;
     }
     
+    #sidebar div.side-menu .menu-body ul.sidenav li.active {
+        border-left: 4px solid #19aa8d;
+        background: #293846;
+    }
+    
     #sidebar div.side-menu .menu-body ul.sidenav li a {
         color: rgba(255, 255, 255, 0.8);
         border-radius: 0;
@@ -106,10 +112,13 @@ declare var jQuery: any;
         padding: 14px 0;
         display: inline;
     }
+    #sidebar div.side-menu .menu-body ul.sidenav li.active a {
+        background: none;
+    }
     
     #sidebar div.side-menu .menu-body ul.sidenav li a i {
         font-size: 18px;
-        padding: 14px 13px 13px 15px;        
+        padding: 13px;  
     }
     
     #sidebar div.side-menu .menu-body ul.sidenav li a:hover {
@@ -192,60 +201,7 @@ declare var jQuery: any;
         padding: 12px;
         overflow: hidden;
     }
-
-    #sidebar div.side-widgets .widgets-content .avatar-name {
-        padding-top: 12px;
-        font-size: 14px;
-    }
-    
-    #sidebar div.side-widgets .widgets-content .calendar-container {
-        margin-top: 10px;
-    }
-    
-    #sidebar div.side-widgets .widgets-content .news-feed .feed-header {
-        text-transform: uppercase;
-        margin-left: -12px;
-        margin-right: -12px;
-        height: 27px;
-        padding-top: 6px;
-        padding-left: 12px;
-        font-size: 10px;
-        margin-top: 10px;
-        background: #1a252f;
-    }
-    
-    #sidebar div.side-widgets .widgets-content .news-feed .feed-content {
-        margin-top: 4px;
-    }
-    
-    #sidebar div.side-widgets .widgets-content .news-feed .feed-content ul {
-        list-style-type: none;
-        padding: 0;
-    }
-    
-    #sidebar div.side-widgets .widgets-content .news-feed .feed-content ul li {
-        height: 40px;
-        padding-top: 4px;
-        font-size: 10.5px;
-    }
-    
-    #sidebar div.side-widgets .widgets-content .news-feed .feed-content ul li .feed-date {
-        float: right;
-        font-size: 9px;
-        padding-right: 5px;
-        color: #eee;
-    }
-    
-    #sidebar div.side-widgets .widgets-content .news-feed .feed-content ul li a {
-        color: inherit;
-    }
-    
-    #sidebar div.side-widgets .widgets-content .news-feed .feed-content ul li a:hover, #sidebar div.side-widgets .widgets-content .news-feed .feed-content ul li a:focus {
-        color: white;
-        text-decoration: none;
-    }
-
-   
+       
     @media screen and (max-width: 768px) {
         #sidebar {
             left: -235px;
@@ -259,7 +215,11 @@ declare var jQuery: any;
 })
 
 export class SideNavComponent implements OnInit {
-  constructor(private _el: ElementRef){}
+
+  constructor(private _el: ElementRef,
+              private _route: Router ){
+    
+  }
   
   ngOnInit(): void {
     let element = jQuery(this._el.nativeElement).find('#sidebar');
@@ -270,5 +230,9 @@ export class SideNavComponent implements OnInit {
         mainContainer.removeClass('main-container-ml-zero');
       }
     });
+  }
+
+  isActive(instruction: string[]): boolean {
+    return this._route.isRouteActive(this._route.generate(instruction));
   }
 }

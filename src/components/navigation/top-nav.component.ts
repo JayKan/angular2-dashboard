@@ -25,11 +25,11 @@ import { DROPDOWN_DIRECTIVES } from '../dropdown/dropdown';
         font-size: 18px;
         line-height: 20px;     
         padding: 15px 0 15px 65px;
-        color: #7997b5;          
+        color: #6AC1BE;          
         float: left;
         margin-right: 16px;
-
     }
+    
     .topnav-navbar .collapse .navbar-nav .navbar-form {
         margin-top: 0.375rem;
         position: relative;
@@ -69,6 +69,7 @@ import { DROPDOWN_DIRECTIVES } from '../dropdown/dropdown';
 
     .topnav-navbar .collapse .navbar-nav .nav-item .dropdown > a:hover, .topnav-navbar .collapse .navbar-nav .nav-item .dropdown > a:focus, .topnav-navbar .collapse .navbar-nav .nav-item .dropdown > a:visited, .topnav-navbar .collapse .navbar-nav .nav-item .dropdown > a:active {
         background: #2c3e50 !important;
+        text-decoration: none;
         color: #FFF;
     }
     
