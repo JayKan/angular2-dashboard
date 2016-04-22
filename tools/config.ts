@@ -36,7 +36,7 @@ export const TMP_DEST       = `${DIST_DIR}/tmp`;
 export const APP_ASSETS: InjectableDependency[] = [
   { src: `${ASSETS_SRC}/main.css`,                                                   inject: true,   dest: CSS_DEST },
   { src: `${ASSETS_SRC}/${BOWER_COMPONENTS}/jqvmap/dist/jqvmap.css`,                 inject: true,   dest: CSS_DEST },
-  { src: `${ASSETS_SRC}/${BOWER_COMPONENTS}/jqvmap/dist/jquery.vmap.js`,             inject: 'libs', dest: JS_DEST  },
+  { src: `${ASSETS_SRC}/${BOWER_COMPONENTS}/jqvmap/dist/jquery.vmap.min.js`,             inject: 'libs', dest: JS_DEST  },
   { src: `${ASSETS_SRC}/${BOWER_COMPONENTS}/jqvmap/dist/maps/jquery.vmap.world.js`,  inject: 'libs', dest: JS_DEST  } 
 ];
 
@@ -53,8 +53,9 @@ export const DEV_NPM_DEPENDENCIES: InjectableDependency[] = normalizeDependencie
   { src: 'angular2/bundles/http.js',                                inject: 'libs',   dest: JS_DEST    },
   { src: 'jquery/dist/jquery.min.js',                               inject: 'libs',   dest: JS_DEST    },
   { src: 'moment/min/moment.min.js',                                inject: 'libs',   dest: JS_DEST    },
-  { src: 'fullcalendar/dist/fullcalendar.js',                       inject: 'libs',   dest: JS_DEST    },
-  { src: 'fullcalendar/dist/fullcalendar.css',                      inject: true,     dest: CSS_DEST   },
+  { src: 'chart.js/dist/Chart.bundle.min.js',                       inject: 'libs',   dest: JS_DEST    },
+  { src: 'fullcalendar/dist/fullcalendar.min.js',                   inject: 'libs',   dest: JS_DEST    },
+  { src: 'fullcalendar/dist/fullcalendar.min.css',                  inject: true,     dest: CSS_DEST   },
   { src: 'c3/c3.css',                                               inject: true,     dest: CSS_DEST   },
   { src: 'c3/node_modules/d3/d3.js',                                inject: 'libs',   dest: JS_DEST    },
   { src: 'c3/c3.js',                                                inject: 'libs',   dest: JS_DEST    },
