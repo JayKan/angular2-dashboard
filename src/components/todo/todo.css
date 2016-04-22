@@ -1,0 +1,122 @@
+.todo-container {
+    position: relative;
+    height: 350px;
+}
+.text-xs-center {
+    text-align: center !important;
+}
+
+.todo-container .todo-header {
+    position: relative;
+}
+.card.card-danger {
+    background-color: #de6764;
+    border-color: #de6764;
+}
+
+.todo-container .todo-header h4 {
+    color: #FFFFFF;
+    font-weight: 300;
+    font-size: 20px;
+    margin: 0;
+}
+
+.todo-container .todo-header h4 .fa {
+    font-size: 24px;
+    position: relative;
+    top: 3px;
+    right: 2px;
+}
+
+.todo-container .todo-body .todo-list-wrap {
+    height: 215px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.todo-container .todo-body .todo-list {
+    color: white;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.todo-container .todo-body .todo-list li {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    font-size: 15px;
+}
+
+.todo-container .todo-body .todo-list li .checkbox1 input:checked + span:before {
+    background: inherit;
+    border-color: inherit;
+    content: "\2713";
+}
+
+.todo-container .todo-body .todo-list li .checkbox1 {
+    padding-right: 7px;
+}
+
+.todo-container .todo-body .todo-list li .done-true {
+    text-decoration: line-through;
+}
+
+.todo-container .todo-body .todo-from-bottom .form-control {
+    border-color: white;
+}
+
+.todo-container .todo-body .todo-from-bottom .btn {
+    background: inherit;
+    color: white;
+    border-color: white;
+}
+
+.todo-container .todo-body .checkbox1 span:before {
+    border-color: #fff;
+}
+
+.todo-container.card-danger .card-header {
+    background-color: #db5b57;
+    padding: 10px;
+    border-bottom: 1px solid #e5e5e5;
+}
+.checkbox1 {
+    position: relative;
+    padding-right: 15px;
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.checkbox1 input[type=checkbox] {
+    position: absolute;
+    height: inherit;
+    width: inherit;
+    opacity: 0;
+    left: 0;
+}
+
+.checkbox1 span {
+    cursor: pointer;
+    position: relative;
+    margin-right: 5px;
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    vertical-align: middle;
+}
+
+.checkbox1 span:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: " ";
+    color: #fff;
+    text-align: center;
+    font-size: 22px;
+    border: solid 2px #ddd;
+    line-height: 16px;
+}
