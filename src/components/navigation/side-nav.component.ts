@@ -217,9 +217,7 @@ declare var jQuery: any;
 export class SideNavComponent implements OnInit {
 
   constructor(private _el: ElementRef,
-              private _route: Router ){
-    
-  }
+              private _route: Router ) {}
   
   ngOnInit(): void {
     let element = jQuery(this._el.nativeElement).find('#sidebar');
