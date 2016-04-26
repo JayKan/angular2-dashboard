@@ -1,6 +1,5 @@
-import {Component, ViewEncapsulation, OnInit } from 'angular2/core';
-import { ChartContainer } from './chart-container.component';
-import { randomScalingGenerator, randomColor } from '../../core/utils';
+import { Component, ViewEncapsulation, OnInit } from 'angular2/core';
+import { ChartContainer, randomScalingGenerator, randomColor } from '../common/common';
 
 @Component({
   selector: 'bubble-chart-widget',
@@ -52,7 +51,7 @@ export class BubbleChartWidget implements OnInit {
       datasets: [
         {
           label: "My First dataset",
-          backgroundColor: randomColor(),
+          backgroundColor: randomColor(0.4),
           data: [{
             x: randomScalingGenerator(),
             y: randomScalingGenerator(),
@@ -85,7 +84,7 @@ export class BubbleChartWidget implements OnInit {
         },
         {
           label: "My Second dataset",
-          backgroundColor: randomColor(),
+          backgroundColor: randomColor(0.4),
           data: [{
             x: randomScalingGenerator(),
             y: randomScalingGenerator(),
@@ -145,7 +144,7 @@ export class BubbleChartWidget implements OnInit {
 
   randomize(): void {
     this.bubbleChartData.datasets.forEach(dataset => {
-      dataset.backgroundColor = randomColor();
+      dataset.backgroundColor = randomColor(0.4);
       dataset.data = dataset.data.map(() => {
         return {
           x: randomScalingGenerator(),
@@ -161,7 +160,7 @@ export class BubbleChartWidget implements OnInit {
     this.addedCount+=1;
     let newDataset = {
       label: 'Newly added dataset ' + this.addedCount,
-      backgroundColor: randomColor(),
+      backgroundColor: randomColor(0.4),
       data: []
     };
 
