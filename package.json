@@ -9,7 +9,8 @@
   "author": "Jay Kan",
   "license": "MIT",
   "engines": {
-    "node": ">= 4.2.1 < 5"
+    "node": ">= 4.2.1 < 5",
+    "npm": "2.14.x"
   },
   "dependencies": {
     "angular2": "2.0.0-beta.15",
@@ -29,6 +30,7 @@
   },
   "devDependencies": {
     "async": "^1.4.2",
+    "tiny-lr": "0.2.1",
     "browser-sync": "^2.11.1",
     "chalk": "^1.1.1",
     "connect": "^3.4.1",
