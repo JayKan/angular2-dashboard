@@ -18,6 +18,7 @@ import { DROPDOWN_DIRECTIVES } from '../dropdown/dropdown';
         height: 50px;
         font-size: 0.875rem;
         margin-bottom: 0;
+        box-shadow: 0 0 1px 1px rgba(0,0,0,.14),0 0 2px 2px rgba(0,0,0,.098),0 0 5px 1px rgba(0,0,0,.084);
     }
     .topnav-navbar .navbar-brand {
         width: 235px;
