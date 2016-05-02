@@ -13,7 +13,7 @@
     "npm": "2.14.x"
   },
   "dependencies": {
-    "angular2": "2.0.0-beta.15",
+    "angular2": "2.0.0-beta.16",
     "c3": "^0.4.11-rc4",
     "chart.js": "^2.0.2",
     "es6-module-loader": "^0.17.11",
