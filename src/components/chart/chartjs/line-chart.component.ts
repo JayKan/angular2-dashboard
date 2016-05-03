@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from 'angular2/core';
+import { Component, OnInit, ViewEncapsulation, ChangeDetectionStrategy } from 'angular2/core';
 import { ChartContainer, randomScalingGenerator, randomColor } from '../common/common';
 
 const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
@@ -6,7 +6,7 @@ const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 
 @Component({
   selector: 'line-chart-cmp',
   template:`
-  <chart-container>
+  <chart-container [headerStyle]="'warning'">
     <container-title>
       <h3>Multiple Lines Chart <small>from Chart.js</small></h3>
     </container-title>
@@ -25,7 +25,8 @@ const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 
   </chart-container>
   `,
   encapsulation: ViewEncapsulation.None,
-  directives: [ChartContainer]
+  directives: [ChartContainer],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class LineChartComponent implements OnInit {
 

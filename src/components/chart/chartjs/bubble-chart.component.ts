@@ -1,10 +1,10 @@
-import { Component, ViewEncapsulation, OnInit } from 'angular2/core';
+import { Component, ViewEncapsulation, OnInit, ChangeDetectionStrategy } from 'angular2/core';
 import { ChartContainer, randomScalingGenerator, randomColor } from '../common/common';
 
 @Component({
   selector: 'bubble-chart-widget',
   template:`
-  <chart-container>
+  <chart-container [headerStyle]="'primary'">
     <container-title>
       <h3>Bubble Chart <small>from Chart.js</small></h3>     
     </container-title>
@@ -24,6 +24,7 @@ import { ChartContainer, randomScalingGenerator, randomColor } from '../common/c
   `,
   encapsulation: ViewEncapsulation.None,
   directives: [ChartContainer],
+  changeDetection: ChangeDetectionStrategy.OnPush,
   styles: [`
 #bubble-chart {
     moz-user-select: none;
