@@ -1,10 +1,10 @@
-import { Component, ViewEncapsulation, OnInit } from 'angular2/core';
+import { Component, ViewEncapsulation, OnInit, ChangeDetectionStrategy } from 'angular2/core';
 import { ChartContainer, randomScalingGenerator, randomColor } from '../common/common';
 
 @Component({
   selector: 'polar-area-chart-widget',
   template: `
-  <chart-container>
+  <chart-container [headerStyle]="'danger'">
     <container-title>
       <h3>Polar Area Chart <small>from Chart.js</small></h3>
     </container-title>
@@ -21,7 +21,8 @@ import { ChartContainer, randomScalingGenerator, randomColor } from '../common/c
   </chart-container>
   `,
   directives: [ChartContainer],
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class PolarAreaChartWidget implements OnInit {
   polarChartConfig:any;

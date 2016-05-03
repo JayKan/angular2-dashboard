@@ -10,7 +10,7 @@ interface ChartConfig {
 @Component({
   selector: 'radar-chart-widget',
   template: `
-  <chart-container>
+  <chart-container [headerStyle]="'success'">
     <container-title>
       <h3>Radar Chart <small>from Chart.js</small></h3>
     </container-title>

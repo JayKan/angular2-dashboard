@@ -4,7 +4,7 @@ import { ChartContainer, randomScalingGenerator, randomColor } from '../common/c
 @Component({
   selector: 'scatter-chart-widget',
   template: `
-  <chart-container>
+  <chart-container [headerStyle]="'green'">
     <container-title>
       <h3>Scatter Chart <small>from Chart.js</small></h3>
     </container-title>

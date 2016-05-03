@@ -4,7 +4,7 @@ import {ChartContainer, randomScalingGenerator, randomColor} from '../common/com
 @Component({
   selector: 'combo-line-bar-widget',
   template: `
-  <chart-container>
+  <chart-container [headerStyle]="'primary'">
     <container-title>
       <h3>Combo Bar Line Chart <small>from Chart.js</small></h3>
     </container-title>
