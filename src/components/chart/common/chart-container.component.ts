@@ -1,10 +1,10 @@
-import { Component, ViewEncapsulation } from 'angular2/core';
+import { Component, ViewEncapsulation, Input, ChangeDetectionStrategy } from 'angular2/core';
 
 @Component({
   selector: 'chart-container',
   template: `
   <div id="chart-container">
-    <div class="chart-container-header">        
+    <div class="chart-container-header {{ headerStyle }}">        
       <ng-content select="container-title"></ng-content>
     </div>
     <div class="chart-container-body">         
@@ -16,6 +16,7 @@ import { Component, ViewEncapsulation } from 'angular2/core';
   </div>
   `,
   encapsulation: ViewEncapsulation.None,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   styles: [`
 #chart-container {
     clear: both;
@@ -29,17 +30,33 @@ import { Component, ViewEncapsulation } from 'angular2/core';
     -moz-border-left-colors: none;
     -moz-border-right-colors: none;
     -moz-border-top-colors: none;
-    background-color: #ffffff;
-    border-color: #65788C;
+    background-color: #ffffff;   
     border-image: none;
     border-style: solid solid none;
-    border-width: 4px 0 0;
+    border-width: 5px 0 0;
     color: inherit;
     margin-bottom: 0;
     padding: 10px 15px 7px;
     height: 44px;
 }
-
+#chart-container .chart-container-header.primary {
+    border-color: #65788C;
+}
+#chart-container .chart-container-header.info {
+    border-color: #5bc0de;
+}
+#chart-container .chart-container-header.success {
+    border-color: #5cb85c;
+}
+#chart-container .chart-container-header.green {
+    border-color: #19aa8d;
+}
+#chart-container .chart-container-header.danger {
+    border-color: #de6764;
+}
+#chart-container .chart-container-header.warning {
+    border-color: #f0ad4e;
+}
 
 #chart-container .chart-container-header h3 {
     font-size: 15px;
@@ -82,4 +99,6 @@ import { Component, ViewEncapsulation } from 'angular2/core';
 }
   `]
 })
-export class ChartContainer {}
+export class ChartContainer {
+  @Input() headerStyle: string;
+}
