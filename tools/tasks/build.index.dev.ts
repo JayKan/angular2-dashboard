@@ -1,4 +1,4 @@
-import {join} from 'path';
+import { join } from 'path';
 import { APP_SRC, APP_DEST, DEV_DEPENDENCIES } from '../config';
 import { transformPath, templateLocals } from '../utils';
 

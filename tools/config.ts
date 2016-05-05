@@ -25,6 +25,7 @@ export const COVERAGE_PORT  = argv['coverage-port']  || 3004;
   
 export const ENV            = getEnvironment();
 export const APP_BASE       = argv['base']           || '/';
+export const ENABLE_HOT_LOADING   = !!argv['hot-loader'];
 
 export const APP_DEST       = `${DIST_DIR}/${ENV}`;
 export const CSS_DEST       = `${APP_DEST}/css`;
