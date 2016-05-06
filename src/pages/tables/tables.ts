@@ -1,23 +1,23 @@
-import { Component, OnInit } from 'angular2/core';
+import { Component } from 'angular2/core';
+import { Container } from '../../components/container/container';
 
 @Component({
   selector: 'tables',
-  template:`
-  <h4>Dashboard@Tables</h4>
+  template:` 
   <div class="animate">
     <div class="row">
       <div class="col-md-6">
-        <div class="card">
-          <div class="card-header card-primary card-inverse">
-            <span class="card-title">Regular Table</span>
-          </div>
-          <div class="card-block">
+        <container [headerStyle]="'primary'">
+          <table-header>
+            <span class="title">Regular Table</span>           
+          </table-header>
+          <table-body>
             <table class="table">
               <thead>
                 <tr>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Address</th>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Address</th>
                 </tr>
               </thead>
               <tbody>
@@ -37,21 +37,197 @@ import { Component, OnInit } from 'angular2/core';
                   <td>Southampton, UK</td>
                 </tr>
               </tbody>
-            </table>            
-          </div>
-        </div>
+            </table>  
+          </table-body>
+        </container>
+      </div>
+      <div class="col-md-6">
+        <container>
+          <table-header>
+            <span class="title default">Bordered Table</span>
+</table-header>
+          <table-body>
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Address</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>John</td>
+                  <td>john@gmail.com</td>
+                  <td>London, UK</td>
+                </tr>
+                <tr>
+                  <td>Andy</td>
+                  <td>andygmail.com</td>
+                  <td>Merseyside, UK</td>
+                </tr>
+                <tr>
+                  <td>Frank</td>
+                  <td>frank@gmail.com</td>
+                  <td>Southampton, UK</td>
+                </tr>
+              </tbody>
+            </table>  
+          </table-body>
+        </container>        
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-md-6">
+        <container [headerStyle]="'info'">
+          <table-header>
+            <span class="title">Striped Table</span>
+          </table-header>
+          
+          <table-body>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Address</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>John</td>
+                  <td>john@gmail.com</td>
+                  <td>London, UK</td>
+                </tr>
+                <tr>
+                  <td>Andy</td>
+                  <td>andygmail.com</td>
+                  <td>Merseyside, UK</td>
+                </tr>
+                <tr>
+                  <td>Frank</td>
+                  <td>frank@gmail.com</td>
+                  <td>Southampton, UK</td>
+                </tr>
+              </tbody>
+            </table>  
+          </table-body>
+        </container>
+      </div>
+      <div class="col-md-6">       
+        <container [headerStyle]="'success'">
+          <table-header>
+            <span class="title">Hover Table</span>
+          </table-header>
+          <table-body>
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Address</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>John</td>
+                  <td>john@gmail.com</td>
+                  <td>London, UK</td>
+                </tr>
+                <tr>
+                  <td>Andy</td>
+                  <td>andygmail.com</td>
+                  <td>Merseyside, UK</td>
+                </tr>
+                <tr>
+                  <td>Frank</td>
+                  <td>frank@gmail.com</td>
+                  <td>Southampton, UK</td>
+                </tr>
+              </tbody>
+            </table>  
+          </table-body>
+        </container>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-md-6">
+        <container [headerStyle]="'danger'">
+          <table-header>
+            <span class="title">Condensed Table</span>
+          </table-header>
+          <table-body>
+            <table class="table table-condensed">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Address</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>John</td>
+                  <td>john@gmail.com</td>
+                  <td>London, UK</td>
+                </tr>
+                <tr>
+                  <td>Andy</td>
+                  <td>andygmail.com</td>
+                  <td>Merseyside, UK</td>
+                </tr>
+                <tr>
+                  <td>Frank</td>
+                  <td>frank@gmail.com</td>
+                  <td>Southampton, UK</td>
+                </tr>
+              </tbody>
+            </table>  
+          </table-body>
+        </container>
+      </div>
+      
+      <div class="col-md-6">
+        <container [headerStyle]="'warning'">
+          <table-header>
+            <span class="title">Condensed, Bordered, Striped Table</span>
+          </table-header>
+          <table-body>
+            <table class="table table-condensed table-bordered table-striped">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Address</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>John</td>
+                  <td>john@gmail.com</td>
+                  <td>London, UK</td>
+                </tr>
+                <tr>
+                  <td>Andy</td>
+                  <td>andygmail.com</td>
+                  <td>Merseyside, UK</td>
+                </tr>
+                <tr>
+                  <td>Frank</td>
+                  <td>frank@gmail.com</td>
+                  <td>Southampton, UK</td>
+                </tr>
+              </tbody>
+            </table>  
+          </table-body>
+        </container>  
       </div>
     </div>
   </div>
   `,
-  styles: [`
-  
-  `]
+  directives: [Container]
 })
-export class TablesView implements OnInit {
 
-  constructor(){}
-
-  ngOnInit(): void {
-  }
-}
+export class TablesView {}
