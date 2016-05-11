@@ -1,7 +1,9 @@
 import { Component, ViewEncapsulation } from 'angular2/core';
 import { RouteConfig, ROUTER_DIRECTIVES } from 'angular2/router';
 import { TopNavComponent, SideNavComponent } from '../components/navigation/navigation';
-import { Home } from '../pages/home/home';
+import { HomeView } from '../pages/home/home';
+import { ChartsView } from '../pages/charts/charts';
+import { TablesView } from '../pages/tables/tables';
 
 @Component({
   selector: 'dashboard',
@@ -32,10 +34,12 @@ import { Home } from '../pages/home/home';
 })
 
 @RouteConfig([
-  { path: '/', component: Home, name: 'Home', useAsDefault: true }
+  { path: '/',       component: HomeView,   name: 'Home',  useAsDefault: true   },
+  { path: '/charts', component: ChartsView, name: 'Charts'                      },
+  { path: '/tables', component: TablesView, name: 'Tables'                      }
+  
 ])
 export class DashboardComponent {
-  constructor() {
 
-  }
+  constructor() {}
 }

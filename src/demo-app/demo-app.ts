@@ -12,14 +12,17 @@ import { DashboardComponent } from '../dashboard/dashboard';
   `,
   directives: [ROUTER_DIRECTIVES],
   providers: [ROUTER_PROVIDERS],
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
+  styles: [`
+  body {
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;  
+  }  
+  `]
 })
 
 @RouteConfig([
   { path: '/login',         component: LoginComponent,          name: 'Login',        useAsDefault: true  },
   { path: '/registration',  component: RegistrationComponent,   name: 'Registration'                      },
-  { path: '/dashboard/...', component: DashboardComponent,  name: 'Dashboard'                             }
+  { path: '/dashboard/...', component: DashboardComponent,      name: 'Dashboard'                         }
 ])
-export class DemoApp {
-  
-}
+export class DemoApp {}

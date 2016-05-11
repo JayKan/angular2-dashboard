@@ -109,7 +109,7 @@ import {
   styleUrls: ['pages/home/home.css']
 })
 
-export class Home implements OnInit {
+export class HomeView implements OnInit {
   stats: Array<any>;
   
   ngOnInit(): void {
