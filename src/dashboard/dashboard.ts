@@ -4,6 +4,7 @@ import { TopNavComponent, SideNavComponent } from '../components/navigation/navi
 import { HomeView } from '../pages/home/home';
 import { ChartsView } from '../pages/charts/charts';
 import { TablesView } from '../pages/tables/tables';
+import { GridsView } from '../pages/grids/grids';
 
 @Component({
   selector: 'dashboard',
@@ -36,8 +37,8 @@ import { TablesView } from '../pages/tables/tables';
 @RouteConfig([
   { path: '/',       component: HomeView,   name: 'Home',  useAsDefault: true   },
   { path: '/charts', component: ChartsView, name: 'Charts'                      },
-  { path: '/tables', component: TablesView, name: 'Tables'                      }
-  
+  { path: '/tables', component: TablesView, name: 'Tables'                      },
+  { path: '/grids',  component: GridsView,  name: 'Grids'                       }
 ])
 export class DashboardComponent {
 

@@ -12,6 +12,15 @@
             </ul>
           </li>
 
+          <li [class.active]="isActive(['Grids'])">
+            <a [routerLink]="['Grids']">
+              <i class="fa fa-th-large"></i>
+            </a>
+            <ul class="nested-dropdown animated">
+              <li><a [routerLink]="['Grids']">Grids</a></li>
+            </ul>
+          </li>
+
           <li [class.active]="isActive(['Tables'])">
             <a [routerLink]="['Tables']">
               <i class="fa fa-list"></i>
