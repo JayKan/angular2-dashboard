@@ -1,0 +1,11 @@
+.profile .avatar-name {
+    padding-top: 12px;
+    font-size: 14px;
+}
+.profile .profile-icon {
+    border-radius: 50%;
+    width: 125px;
+}
+.profile a {
+    cursor: pointer;
+}
