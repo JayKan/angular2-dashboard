@@ -1,0 +1,239 @@
+import { Component, ViewEncapsulation } from 'angular2/core';
+import { Container } from '../../components/container/container';
+
+@Component({
+  selector: 'typography',
+  directives: [Container],
+  encapsulation: ViewEncapsulation.None,
+  template: `
+  <div class="animate">				
+	  <div class="row">
+		  <div class="col-lg-8 col-md-6">
+		    <container [headerStyle]="'primary'">
+		      <table-header>
+		        <span class="title">Typography</span>
+          </table-header>
+         
+          <table-body> 
+            <div class="content">
+              <h1>Heading 1 <small>Sub-heading</small> </h1> 
+              <h2>Heading 2 <small>Sub-heading</small> </h2> 
+              <h3>Heading 3 <small>Sub-heading</small> </h3> 
+              <h4>Heading 4 <small>Sub-heading</small> </h4>
+              <h5>Heading 5 <small>Sub-heading</small> </h5> 
+              <h6>Heading 6 <small>Sub-heading</small> </h6>
+              
+              <p class="lead">
+                This is an example of lead body copy.
+              </p>
+              <p>
+                This is an example of standard paragraph text. This is an example of <a href="#">link anchor text</a> within body copy.
+              </p> 
+              <p> 
+                <small>This is an example of small, fine print text.</small> 
+              </p>
+               
+              <p>
+                <strong>This is an example of strong, bold text.</strong>
+              </p>
+               
+              <p> 
+                <em>This is an example of emphasized, italic text.</em> 
+              </p>           
+            </div>
+          </table-body>
+        </container>
+        
+			  <container [headerStyle]="'danger'">
+			    <table-header>
+			      <span class="title">Block quotes</span>  
+          </table-header>
+          
+          <table-body>
+            <div class="content">
+              <h5>Default block qoute</h5>
+              <blockquote class="blockquote">
+                <p class="m-b-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+              </blockquote> 
+              <h5>Block quote with Citation</h5> 
+              <blockquote class="blockquote">
+                <p class="m-b-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+              </blockquote>
+              <h5>Right Aligned Block quote</h5>
+              <blockquote class="blockquote blockquote-reverse">
+                 <p class="m-b-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+              </blockquote>              
+            </div>
+          </table-body>
+			  </container>
+			  
+			  <container [headerStyle]="'warning'">
+			    <table-header>
+			     <span class="title">Code</span>
+          </table-header>
+          
+          <table-body>
+            <div class="content">
+              <p>This is an example of an inline code element within body copy. Wrap inline code within a <code>&lt;code&gt;...&lt;/code&gt;</code>tag.</p>
+              <pre class="breadcrumb">This is an example of preformatted text.</pre>
+            </div>
+          </table-body>
+        </container>             
+		  </div>
+		
+		  <div class="col-lg-4 col-md-6"> 
+		    <container [headerStyle]="'info'">
+		      <table-header>
+		        <span class="title">Unordered Lists</span>
+          </table-header>
+		      <table-body>
+		        <div class="content">
+		          <ul class="unordered"> 
+                <li>Lorem ipsum dolor sit amet, consectetur</li> 
+                <li>Necessitatibus quidem similique</li> 
+                <li>lorem ipsum dolor sit amet
+                  <ul class="unordered"> 
+                    <li>Oh yay debitis</li> 
+                    <li>error odio</li> 
+                    <li>Success dolore magni</li> 
+                  </ul>
+                </li> 
+              <li>List Item</li> 
+            </ul> 
+            </div>
+		      </table-body>
+        </container>
+        
+        <container [headerStyle]="'warning'">
+          <table-header>
+            <span class="title">Ordered Lists</span>
+          </table-header>
+          <table-body>
+            <div class="content">
+              <ol class="ordered">
+                <li>List Item lorem ipsum dolor</li> 
+                <li>List Item lorem ipsum dolor</li> 
+                <li>List Item lorem ipsum dolor</li> 
+                <li>List Item lorem ipsum dolor</li> 
+              </ol>
+            </div>
+          </table-body>
+        </container>
+        
+        <container [headerStyle]="'success'">
+          <table-header>
+            <span class="title">Unstyled List</span>
+          </table-header>
+          <table-body>
+            <div class="content">
+              <ul class="list-unstyled"> 
+                <li>List Item lorem ipsum</li> 
+                <li>List Item lorem ipsum</li> 
+                <li>List Item lorem ipsum</li> 
+              </ul>
+            </div>
+          </table-body>
+        </container>
+        
+        <container [headerStyle]="'danger'">
+          <table-header>
+            <span class="title">Inline List</span>
+          </table-header>
+          <table-body>
+            <div class="content">
+            <ul class="list-inline">
+              <li class="list-inline-item">Lorem ipsum</li>
+              <li class="list-inline-item"> Phasellus iaculis </li>
+              <li class="list-inline-item">Nulla volutpat</li>
+            </ul>
+            </div>
+          </table-body>
+        </container>
+        
+        <container [headerStyle]="'info'">
+          <table-header>
+            <span class="title">Emphasis Classes</span>
+          </table-header>
+          <table-body>
+            <div class="content">
+              <span class="text-muted">This is an example of muted text.</span><br> 
+              <span class="text-primary">This is an example of primary text.</span><br> 
+              <span class="text-success">This is an example of success text.</span><br> 
+              <span class="text-info">This is an example of info text.</span><br> 
+              <span class="text-warning">This is an example of warning text.</span><br> 
+              <span class="text-danger">This is an example of danger text.</span>
+            </div>
+          </table-body>
+        </container>
+        
+        <container [headerStyle]="'primary'">
+          <table-header>
+            <span class="title">Alignment Helpers</span>
+          </table-header>
+          <table-body>
+            <div class="content">
+             <p class="left">Left aligned text on all viewport sizes.</p>
+             <p class="center">Center aligned text on all viewport sizes.</p>
+             <p class="right">Right aligned text on all viewport sizes.</p> 
+            </div>
+          </table-body>
+        </container>       
+      </div>
+    </div>
+  </div>  
+  `,
+  styles: [`
+  table-body div.content {
+    display: block;
+    position: relative;
+  }
+  table-body div.content h1 {
+    font-size: 40px;
+  }
+  table-body div.content h2 {
+    font-size: 32px;
+  }
+  table-body div.content h3 {
+    font-size: 28px;
+  }
+  table-body div.content h4 {
+    font-size: 24px;
+  }
+  table-body div.content h5 {
+    font-size: 22px;
+  }
+  table-body div.content h6 {
+    font-size: 16px;
+  }
+  table-body div.content h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-weight: 400;
+  }
+  table-body div.content ul.unordered,
+  table-body div.content ul.list-unstyled {
+    list-style-type: none;
+  } 
+  table-body div.content p, 
+  table-body div.content ul.unordered li,
+  table-body div.content ol.ordered li,
+  table-body div.content ul.list-unstyled li,
+  table-body div.content ul.list-inline li {
+    font-size: 15px;
+  }  
+  table-body div.content .left {
+    text-align: left;
+  }
+  table-body div.content .center {
+    text-align: center;
+  }
+  table-body div.content .right {
+    text-align: right;
+  }
+  `]
+})
+
+export class TypographyView {
+
+}

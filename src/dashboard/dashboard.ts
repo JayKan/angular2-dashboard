@@ -2,6 +2,7 @@ import { Component, ViewEncapsulation } from 'angular2/core';
 import { RouteConfig, ROUTER_DIRECTIVES } from 'angular2/router';
 import { TopNavComponent, SideNavComponent } from '../components/navigation/navigation';
 import { HomeView } from '../pages/home/home';
+import { TypographyView } from '../pages/typography/typography';
 import { ChartsView } from '../pages/charts/charts';
 import { TablesView } from '../pages/tables/tables';
 import { GridsView } from '../pages/grids/grids';
@@ -35,10 +36,11 @@ import { GridsView } from '../pages/grids/grids';
 })
 
 @RouteConfig([
-  { path: '/',       component: HomeView,   name: 'Home',  useAsDefault: true   },
-  { path: '/charts', component: ChartsView, name: 'Charts'                      },
-  { path: '/tables', component: TablesView, name: 'Tables'                      },
-  { path: '/grids',  component: GridsView,  name: 'Grids'                       }
+  { path: '/',            component: HomeView,        name: 'Home',       useAsDefault: true  },
+  { path: '/typography',  component: TypographyView,  name: 'Typography'                      },
+  { path: '/charts',      component: ChartsView,      name: 'Charts'                          },
+  { path: '/tables',      component: TablesView,      name: 'Tables'                          },
+  { path: '/grids',       component: GridsView,       name: 'Grids'                           }
 ])
 export class DashboardComponent {
 

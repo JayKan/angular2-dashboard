@@ -12,6 +12,15 @@
             </ul>
           </li>
 
+          <li [class.active]="isActive(['Typography'])">
+            <a [routerLink]="['Typography']">
+              <i class="fa fa-text-width"></i>
+            </a>
+            <ul class="nested-dropdown animated">
+              <li><a [routerLink]="['Typography']">Typography</a></li>
+            </ul>
+          </li>
+
           <li [class.active]="isActive(['Grids'])">
             <a [routerLink]="['Grids']">
               <i class="fa fa-th-large"></i>
