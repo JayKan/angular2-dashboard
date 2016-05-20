@@ -24,52 +24,6 @@ import { Component, ViewEncapsulation } from 'angular2/core';
   </div>
   `,
   encapsulation: ViewEncapsulation.None,
-  styles: [`
-#news-feed .feed-header {
-    text-transform: uppercase;
-    margin-left: -12px;
-    margin-right: -12px;
-    height: 32px; 
-    padding: 8px 0 12px 12px;
-    font-size: 12px;
-    margin-top: 10px;
-    font-weight: 500;
-    background: #1a252f;
-}
-
-#news-feed .feed-content {
-    margin-top: 4px;
-}
-
-#news-feed .feed-content ul.feed {
-    list-style-type: none;
-    padding: 0;
-}
-
-#news-feed .feed-content ul.feed li {
-    height: 40px;
-    padding-top: 4px;
-    font-size: 10.5px;
-}
-
-#news-feed .feed-content ul.feed li .feed-date {
-    float: right;
-    font-size: 9px;
-    padding-right: 5px;
-    color: #eee;
-}
-
-#news-feed .feed-content ul.feed li a {
-    color: inherit;
-}
-
-#news-feed .feed-content ul.feed li a:hover, 
-#news-feed .feed-content ul.feed li a:focus {
-    color: white;
-    text-decoration: none;
-}
-  `]
+  stylesUrls: ['components/user/news-feed.style.css']
 })
-export class NewsFeedWidget {
-  
-}
+export class NewsFeedWidget {}
