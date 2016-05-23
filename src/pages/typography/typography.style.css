@@ -1,0 +1,47 @@
+table-body div.content {
+    display: block;
+    position: relative;
+}
+table-body div.content h1 {
+    font-size: 40px;
+}
+table-body div.content h2 {
+    font-size: 32px;
+}
+table-body div.content h3 {
+    font-size: 28px;
+}
+table-body div.content h4 {
+    font-size: 24px;
+}
+table-body div.content h5 {
+    font-size: 22px;
+}
+table-body div.content h6 {
+    font-size: 16px;
+}
+table-body div.content h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-weight: 400;
+}
+table-body div.content ul.unordered,
+table-body div.content ul.list-unstyled {
+    list-style-type: none;
+}
+table-body div.content p,
+table-body div.content ul.unordered li,
+table-body div.content ol.ordered li,
+table-body div.content ul.list-unstyled li,
+table-body div.content ul.list-inline li {
+    font-size: 15px;
+}
+table-body div.content .left {
+    text-align: left;
+}
+table-body div.content .center {
+    text-align: center;
+}
+table-body div.content .right {
+    text-align: right;
+}
