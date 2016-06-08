@@ -1,6 +1,6 @@
-import { Component, ViewEncapsulation } from 'angular2/core';
-import { Router } from 'angular2/router';
-import { CORE_DIRECTIVES } from 'angular2/common';
+import { Component, ViewEncapsulation } from '@angular/core';
+import { Router } from '@angular/router';
+import { CORE_DIRECTIVES } from '@angular/common';
 import { DROPDOWN_DIRECTIVES } from '../dropdown/dropdown';
 
 @Component({

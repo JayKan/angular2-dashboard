@@ -1,5 +1,5 @@
-import { Component, OnInit, ViewEncapsulation } from 'angular2/core';
-import { FORM_DIRECTIVES } from 'angular2/common';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { FORM_DIRECTIVES } from '@angular/common';
 import { TodoList } from './todo.service';
 
 @Component({

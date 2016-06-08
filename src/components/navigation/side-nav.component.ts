@@ -1,5 +1,6 @@
-import { Component, ViewEncapsulation, ElementRef, OnInit } from 'angular2/core';
-import { ROUTER_DIRECTIVES, Router } from 'angular2/router';
+import { Component, ViewEncapsulation, ElementRef, OnInit } from '@angular/core';
+// import { ROUTER_DIRECTIVES } from '@angular/router';
+import { Router, ROUTER_DIRECTIVES} from '@angular/router-deprecated'
 import { CalendarWidget } from '../calendar/calendar';
 import { UserProfileWidget, NewsFeedWidget } from '../user/user';
 

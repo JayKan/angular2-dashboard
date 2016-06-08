@@ -1,4 +1,4 @@
-import { Directive, ElementRef, Host, OnInit, Input, HostBinding, HostListener } from 'angular2/core';
+import { Directive, ElementRef, Host, OnInit, Input, HostBinding, HostListener } from '@angular/core';
 import { Dropdown } from './dropdown.directive';
 
 @Directive({ selector: '[dropdownToggle]' })

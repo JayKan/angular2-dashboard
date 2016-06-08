@@ -1,4 +1,4 @@
-import { Component, Input, ViewEncapsulation } from 'angular2/core';
+import { Component, Input, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'stats-widget',
