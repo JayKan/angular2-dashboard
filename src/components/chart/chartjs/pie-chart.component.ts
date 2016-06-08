@@ -1,11 +1,11 @@
-import { Component, ViewEncapsulation, OnInit, ChangeDetectionStrategy } from 'angular2/core';
+import { Component, ViewEncapsulation, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { ChartContainer, randomScalingGenerator, randomColor } from '../common/common';
 
 @Component({
   selector: 'pie-chart-cmp',
   encapsulation: ViewEncapsulation.None,
   directives: [ChartContainer],
-  changeDection: ChangeDetectionStrategy.OnPush,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
   <chart-container [headerStyle]="'info'">
     <container-title>

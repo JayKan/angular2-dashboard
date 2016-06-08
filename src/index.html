@@ -46,24 +46,13 @@
 <!-- shims:js -->
 <!-- endinject -->
 
-<script>
-  System.config({
-    "defaultJSExtensions": true,
-    "transpiler": "typescript",
-    "map": {
-      "rxjs": "/node_modules/rxjs/Rx.js"
-    }
-  });
-</script>
-
 <!-- libs:js -->
 <!-- endinject -->
 
 <!-- inject:js -->
 <!-- endinject -->
 
-<script>
-  System.import('bootstrap').then(null, console.error.bind(console));
-</script>
+<script type="text/javascript" src="./system.config.js"></script>
+<script type="text/javascript">System.import('bootstrap').then(null, console.error.bind(console));</script>
 </body>
 </html>

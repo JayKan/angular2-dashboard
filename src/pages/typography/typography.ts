@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation } from 'angular2/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import { Container } from '../../components/container/container';
 
 @Component({
@@ -183,7 +183,7 @@ import { Container } from '../../components/container/container';
     </div>
   </div>  
   `,
-  stylesUrls: ['pages/typography/typography.style.css']
+  styleUrls: ['pages/typography/typography.style.css']
 })
 
 export class TypographyView {

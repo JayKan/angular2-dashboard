@@ -11,7 +11,7 @@
     "@angular/platform-browser": "node_modules/@angular/platform-browser/index.js",
     "@angular/platform-browser-dynamic": "node_modules/@angular/platform-browser-dynamic/index.js",
     "@angular/router-deprecated": "node_modules/@angular/router-deprecated/index.js",
-    "@angular/router": "node_modules/@angular/router/@angular/index.js"
+    "@angular/router": "node_modules/@angular/router/index.js"
   };
 
   var config = {

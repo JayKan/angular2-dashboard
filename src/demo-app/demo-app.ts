@@ -1,5 +1,5 @@
-import { Component, ViewEncapsulation } from 'angular2/core';
-import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from 'angular2/router';
+import { Component, ViewEncapsulation } from '@angular/core';
+import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from '@angular/router-deprecated';
 
 import { LoginComponent } from '../components/login/login';
 import { RegistrationComponent } from '../components/registration/registartion';

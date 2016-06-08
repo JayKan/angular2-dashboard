@@ -1,4 +1,4 @@
-import { Directive, OnInit, OnDestroy, Input, Output, HostBinding, EventEmitter, ElementRef, Query, QueryList } from 'angular2/core';
+import { Directive, OnInit, OnDestroy, Input, Output, HostBinding, EventEmitter, ElementRef, Query, QueryList } from '@angular/core';
 import { dropDownService, NONINPUT } from './dropdown.service';
 
 @Directive({selector: '[dropdown]'})

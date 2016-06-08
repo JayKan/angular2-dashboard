@@ -1,5 +1,5 @@
-import { Component, ViewEncapsulation } from 'angular2/core';
-import { RouteConfig, ROUTER_DIRECTIVES } from 'angular2/router';
+import { Component, ViewEncapsulation } from '@angular/core';
+import { RouteConfig, ROUTER_DIRECTIVES } from '@angular/router-deprecated';
 import { TopNavComponent, SideNavComponent } from '../components/navigation/navigation';
 import { HomeView } from '../pages/home/home';
 import { TypographyView } from '../pages/typography/typography';

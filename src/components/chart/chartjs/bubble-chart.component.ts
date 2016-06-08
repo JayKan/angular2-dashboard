@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation, OnInit, ChangeDetectionStrategy } from 'angular2/core';
+import { Component, ViewEncapsulation, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { ChartContainer, randomScalingGenerator, randomColor } from '../common/common';
 
 @Component({
