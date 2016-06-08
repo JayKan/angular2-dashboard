@@ -47,11 +47,8 @@ export const DEV_NPM_DEPENDENCIES: InjectableDependency[] = normalizeDependencie
   { src: 'systemjs/dist/system.src.js',                             inject: 'shims',  dest: JS_DEST    },
   { src: 'reflect-metadata/Reflect.js',                             inject: 'shims',  dest: JS_DEST    },
   { src: 'es6-shim/es6-shim.js',                                    inject: 'shims',  dest: JS_DEST    },
-  { src: 'angular2/bundles/angular2-polyfills.js',                  inject: 'shims',  dest: JS_DEST    },
   { src: 'rxjs/bundles/Rx.js',                                      inject: 'libs',   dest: JS_DEST    },
-  { src: 'angular2/bundles/angular2.js',                            inject: 'libs',   dest: JS_DEST    },
-  { src: 'angular2/bundles/router.js',                              inject: 'libs',   dest: JS_DEST    },
-  { src: 'angular2/bundles/http.js',                                inject: 'libs',   dest: JS_DEST    },
+  { src: 'zone.js/dist/zone.js',                                    inject: 'libs',   dest: JS_DEST    },
   { src: 'jquery/dist/jquery.min.js',                               inject: 'libs',   dest: JS_DEST    },
   { src: 'moment/min/moment.min.js',                                inject: 'libs',   dest: JS_DEST    },
   { src: 'chart.js/dist/Chart.bundle.min.js',                       inject: 'libs',   dest: JS_DEST    },
@@ -68,8 +65,7 @@ export const PROD_NPM_DEPENDENCIES: InjectableDependency[] = normalizeDependenci
   { src: 'systemjs/dist/system-polyfills.src.js', inject: 'shims'                   },
   { src: 'reflect-metadata/Reflect.js', inject: 'shims'                             },
   { src: 'es6-shim/es6-shim.min.js', inject: 'shims'                                },
-  { src: 'systemjs/dist/system.js', inject: 'shims'                                 },
-  { src: 'angular2/bundles/angular2-polyfills.min.js', inject: 'libs'               },
+  { src: 'systemjs/dist/system.js', inject: 'shims'                                 }
 ]);
 
 export const DEV_DEPENDENCIES   = DEV_NPM_DEPENDENCIES.concat(APP_ASSETS);
