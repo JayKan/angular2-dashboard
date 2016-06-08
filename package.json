@@ -13,7 +13,16 @@
     "npm": "2.14.x"
   },
   "dependencies": {
-    "angular2": "2.0.0-beta.16",
+    "@angular/common":  "2.0.0-rc.1",
+    "@angular/compiler":  "2.0.0-rc.1",
+    "@angular/core":  "2.0.0-rc.1",
+    "@angular/http":  "2.0.0-rc.1",
+    "@angular/platform-browser":  "2.0.0-rc.1",
+    "@angular/platform-browser-dynamic":  "2.0.0-rc.1",
+    "@angular/router":  "2.0.0-rc.1",
+    "@angular/router-deprecated":  "2.0.0-rc.1",
+    "@angular/upgrade":  "2.0.0-rc.1",
+
     "c3": "^0.4.11-rc4",
     "chart.js": "^2.0.2",
     "es6-module-loader": "^0.17.11",
@@ -24,7 +33,7 @@
     "moment": "^2.12.0",
     "perfect-scrollbar": "^0.6.10",
     "reflect-metadata": "0.1.2",
-    "rxjs": "5.0.0-beta.2",
+    "rxjs": "5.0.0-beta.6",
     "systemjs": "~0.19.18",
     "zone.js": "^0.6.10"
   },
