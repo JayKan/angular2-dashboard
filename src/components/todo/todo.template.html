@@ -9,7 +9,7 @@
     <div class="todo-body">
       <div class="todo-list-wrap">
         <ul class="todo-list">
-          <li *ngFor="#todo of _todoList.get()">
+          <li *ngFor="let todo of _todoList.get()">
             <label class="checkbox1 animated bounceInDown">
               <input type="checkbox">
               <span></span>

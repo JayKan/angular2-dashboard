@@ -16,7 +16,7 @@ import {
     <div class="row">    
       <div class="col-lg-4 col-xl-3">
         <div class="home-stats">          
-          <div *ngFor="#record of stats">
+          <div *ngFor="let record of stats">
             <stats-widget
               [icon]="record.icon"
               [value]="record.value"
