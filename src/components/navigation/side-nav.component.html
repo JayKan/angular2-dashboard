@@ -3,6 +3,7 @@
     <div class="side-menu">
       <div class="menu-body">
         <ul class="nav nav-pills nav-stacked sidenav">
+
           <li [class.active]="isActive(['Home'])">
             <a [routerLink]="['Home']">
               <i class="fa fa-home"></i>
@@ -47,6 +48,16 @@
               <li><a [routerLink]="['Charts']">Charts</a></li>
             </ul>
           </li>
+
+          <li [class.active]="isActive(['Mail'])">
+            <a [routerLink]="['Mail']">
+              <i class="fa fa-envelope-o"></i>
+            </a>
+            <ul class="nested-dropdown animated">
+              <li><a [routerLink]="['Mail']">Mail</a></li>
+            </ul>
+          </li>
+
         </ul>
       </div>
     </div>
