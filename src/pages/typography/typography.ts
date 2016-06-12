@@ -185,7 +185,4 @@ import { Container } from '../../components/container/container';
   `,
   styleUrls: ['pages/typography/typography.style.css']
 })
-
-export class TypographyView {
-
-}
+export class TypographyView {}
