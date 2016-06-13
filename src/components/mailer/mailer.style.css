@@ -171,6 +171,7 @@
     overflow: auto;
 }
 
+
 .wrap-list .messages-list .messages-item:hover {
     opacity: 0.9;
 }
@@ -193,6 +194,10 @@
 .wrap-list .messages-list .messages-item p {
     font-size: 11.5px;
     line-height: 14px;
+}
+
+.wrap-list li.active-message .messages-item-content p  {
+    color: #F3F3F3 !important;
 }
 
 .wrap-list .messages-list .name {
@@ -349,7 +354,19 @@
 
 .text-wrapper .message-content {
     padding: 15px;
-    overflow: auto;
+}
+.text-wrapper .message-content pre.content {
+    display: block;
+    font-size: 13px;
+    line-height: 1.42857143;
+    color: #333333;
+    word-break: break-all;
+    word-wrap: break-word;
+    margin: 0 -40px auto;
+    border: none;
+    background-color: white;
+    padding: 10px 0;
+    border-radius: 0;
 }
 
 .text-wrapper .message-footer {
@@ -387,7 +404,6 @@
     .mailer-container .messages-container {
         padding-top: 115px !important;
         display: inline-block;
-        margin-left: -4px;
         width: 60%;
         min-width: 0;
     }
@@ -405,7 +421,6 @@
     .mailer-container .messages-container {
         padding-top: 115px !important;
         display: inline-block;
-        margin-left: -4px;
         width: 70%;
         min-width: 0;
     }

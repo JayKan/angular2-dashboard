@@ -1,4 +1,4 @@
-import {Component, ViewEncapsulation} from '@angular/core';
+import { Component, ViewEncapsulation, OnInit } from '@angular/core';
 
 @Component({
   selector: 'mailer-widget',
@@ -79,164 +79,25 @@ import {Component, ViewEncapsulation} from '@angular/core';
               <div class="wrap-list">
                 <div class="messages-list">
                   <ul>
-                    <li class="messages-item">
-                      <a href="#">
+                    <li class="messages-item"
+                        *ngFor="let email of emails"
+                        [class.active-message]="email === selectedEmail"
+                        (click)="selectedEmail = email"
+                    >                               
+                      <a>
                         <div class="leftist"><i class="fa fa-star"></i>	
                           <label class="checkbox1" for="Option45">
-                            <input id="Option45" type="checkbox" class="">
+                            <input id="Option45" type="checkbox">
                             <span></span>
                           </label>
                         </div>
-                        <span class="messages-item-subject"> Nicole Bell</span>
-                        <span class="date-class text-muted pull-right"><i class="fa fa-paperclip"></i>&nbsp;7th Jan</span>
-                        <span class="messages-item-content"><p>Hi Peter, Thanks for the e-mail. Lorem ipsum dolor sit amet,</p></span>
+                        <span class="messages-item-subject">{{ email.sender }}</span>
+                        <span class="date-class text-muted pull-right"><i class="fa fa-paperclip"></i>&nbsp;{{ email.date }}</span>
+                        <span class="messages-item-content">
+                          <p>{{ email.subject }}</p>
+                        </span>
                       </a>
-                    </li>
-                    <li class="messages-item">
-                      <div class="leftist"><i class="fa fa-star"></i>	
-                        <label class="checkbox1" for="Option55">
-                          <input id="Option55" type="checkbox" class="">
-                          <span></span>
-                        </label>
-                      </div>		
-                      <span class="messages-item-subject"> John Doe </span>
-                      <span class="date-class text-muted pull-right"><i class="fa fa-paperclip"></i>&nbsp;4th Jan</span>
-                      <span class="messages-item-content"><p>Dear Mr. Clarks I am interested in Lorem ipsum dolor sit amet,</p></span>
-                    </li>
-                    <li class="messages-item active-message">
-                      <div class="leftist"><i class="fa fa-star"></i>	
-                        <label class="checkbox1" for="Option65">
-                          <input id="Option65" type="checkbox" class="">
-                          <span></span>
-                        </label>
-                      </div>		
-                      <span class="messages-item-subject"> Jane Doe </span>
-                      <span class="date-class text-muted pull-right">&nbsp;1st Jan</span>
-                      <span class="messages-item-content"><p>Dear Mr. Clarks In response Lorem ipsum dolor sit amet,</p></span>
-                    </li>
-                    <li class="messages-item">
-                      <div class="leftist"><i class="fa fa-star fa-starred"></i>	
-                        <label class="checkbox1" for="Option42">
-                          <input id="Option42" type="checkbox" class="">
-                          <span></span>
-                        </label>
-                      </div>		
-                      <span class="messages-item-subject">  Peter Drury </span>
-                      <span class="date-class text-muted pull-right">&nbsp;29th Dec</span>
-                      <span class="messages-item-content"><p>Dear Mr. Clarks, As we discussed Lorem ipsum dolor sit amet,</p></span>
-                    </li>
-                    <li class="messages-item">
-                      <div class="leftist"><i class="fa fa-star"></i>	
-                        <label class="checkbox1" for="Option32">
-                          <input id="Option32" type="checkbox" class="">
-                          <span></span>
-                        </label>
-                      </div>		
-                      <span class="messages-item-subject"> John Smith </span>
-                      <span class="date-class text-muted pull-right"><i class="fa fa-paperclip"></i>&nbsp;26th Dec</span>
-                      <span class="messages-item-content"><p>Dear Peter, Good Day! Lorem ipsum dolor sit amet,</p></span>
-                    </li>
-                    <li class="messages-item">
-                      <div class="leftist"><i class="fa fa-star"></i>	
-                        <label class="checkbox1" for="Option92">
-                          <input id="Option92" type="checkbox" class="">
-                          <span></span>
-                        </label>
-                      </div>		
-                      <span class="messages-item-subject">Congratulations </span>
-                      <span class="date-class text-muted pull-right">&nbsp;7th jan</span>
-                      <span class="messages-item-content"><p>Dear friend Peter Lorem ipsum dolor sit amet,</p></span>
-                    </li>
-                    <li class="messages-item">
-                      <div class="leftist"><i class="fa fa-star"></i>	
-                        <label class="checkbox1" for="Option30">
-                          <input id="Option30" type="checkbox" class="">
-                          <span></span>
-                        </label>
-                      </div>		
-                      <span class="messages-item-subject"> Sincere request to keep in touch.</span>
-                      <span class="date-class text-muted pull-right"><i class="fa fa-paperclip"></i>&nbsp;7th jan</span>
-                      <span class="messages-item-content"><p>Dear Mr. Clarks,I was shocked Lorem ipsum dolor sit amet,</p></span>
-                    </li>
-                    <li class="messages-item">
-                      <a href="#">
-                        <div class="leftist"><i class="fa fa-star"></i>	
-                          <label class="checkbox1" for="Option45">
-                            <input id="Option45" type="checkbox" class="">
-                            <span></span>
-                          </label>
-                        </div>
-                        <span class="messages-item-subject"> Nicole Bell</span>
-                        <span class="date-class text-muted pull-right"><i class="fa fa-paperclip"></i>&nbsp;7th Jan</span>
-                        <span class="messages-item-content"><p>Hi Peter, Thanks for the e-mail. Lorem ipsum dolor sit amet,</p></span>
-                      </a>
-                    </li>
-                    <li class="messages-item">
-                      <div class="leftist"><i class="fa fa-star"></i>	
-                        <label class="checkbox1" for="Option55">
-                          <input id="Option55" type="checkbox" class="">
-                          <span></span>
-                        </label>
-                      </div>		
-                      <span class="messages-item-subject"> John Doe </span>
-                      <span class="date-class text-muted pull-right"><i class="fa fa-paperclip"></i>&nbsp;4th Jan</span>
-                      <span class="messages-item-content"><p>Dear Mr. Clarks I am interested in Lorem ipsum dolor sit amet,</p></span>
-                    </li>
-                    <li class="messages-item">
-                      <div class="leftist"><i class="fa fa-star"></i>	
-                        <label class="checkbox1" for="Option65">
-                          <input id="Option65" type="checkbox" class="">
-                          <span></span>
-                        </label>
-                      </div>		
-                      <span class="messages-item-subject"> Jane Doe </span>
-                      <span class="date-class text-muted pull-right">&nbsp;1st Jan</span>
-                      <span class="messages-item-content"><p>Dear Mr. Clarks In response Lorem ipsum dolor sit amet,</p></span>
-                    </li>
-                    <li class="messages-item">
-                      <div class="leftist"><i class="fa fa-star fa-starred"></i>	
-                        <label class="checkbox1" for="Option42">
-                          <input id="Option42" type="checkbox" class="">
-                          <span></span>
-                        </label>
-                      </div>		
-                      <span class="messages-item-subject">  Peter Drury </span>
-                      <span class="date-class text-muted pull-right">&nbsp;29th Dec</span>
-                      <span class="messages-item-content"><p>Dear Mr. Clarks, As we discussed Lorem ipsum dolor sit amet,</p></span>
-                    </li>
-                    <li class="messages-item">
-                      <div class="leftist"><i class="fa fa-star"></i>	
-                        <label class="checkbox1" for="Option32">
-                          <input id="Option32" type="checkbox" class="">
-                          <span></span>
-                        </label>
-                      </div>		
-                      <span class="messages-item-subject"> John Smith </span>
-                      <span class="date-class text-muted pull-right"><i class="fa fa-paperclip"></i>&nbsp;26th Dec</span>
-                      <span class="messages-item-content"><p>Dear Peter, Good Day! Lorem ipsum dolor sit amet,</p></span>
-                    </li>
-                    <li class="messages-item">
-                      <div class="leftist"><i class="fa fa-star"></i>	
-                        <label class="checkbox1" for="Option92">
-                          <input id="Option92" type="checkbox" class="">
-                          <span></span>
-                        </label>
-                      </div>		
-                      <span class="messages-item-subject">Congratulations </span>
-                      <span class="date-class text-muted pull-right">&nbsp;7th jan</span>
-                      <span class="messages-item-content"><p>Dear friend Peter Lorem ipsum dolor sit amet,</p></span>
-                    </li>
-                    <li class="messages-item">
-                      <div class="leftist"><i class="fa fa-star"></i>	
-                        <label class="checkbox1" for="Option30">
-                          <input id="Option30" type="checkbox" class="">
-                          <span></span>
-                        </label>
-                      </div>		
-                      <span class="messages-item-subject"> Sincere request to keep in touch.</span>
-                      <span class="date-class text-muted pull-right"><i class="fa fa-paperclip"></i>&nbsp;7th jan</span>
-                      <span class="messages-item-content"><p>Dear Mr. Clarks,I was shocked Lorem ipsum dolor sit amet,</p></span>
-                    </li>
+                    </li>                  
                   </ul>
                 </div>	
               </div>	          
@@ -247,26 +108,33 @@ import {Component, ViewEncapsulation} from '@angular/core';
                                                                                
       <div class="col-lg-6 col-sm-12 email-detail">
         <div class="text-wrapper">
-          <div class="wrap-message">	
+          <div class="wrap-message"
+               *ngIf="selectedEmail"
+          >	
             <section>
               <div class="message-topic">
-                <i class="fa fa-star m-r-xs text-primary"></i> Development Files <span class="pull-right text-muted"><a href=""><i class="fa fa-reply"></i></a><a href=""><i class="fa fa-trash-o"></i></a></span>
+                <i class="fa fa-star m-r-xs text-primary"></i>
+                {{ selectedEmail.subject }}
+                <span class="pull-right text-muted">
+                  <a><i class="fa fa-reply"></i></a>
+                  <a><i class="fa fa-trash-o"></i></a>
+                </span>
               </div>
               <div class="message-sender">
                 <img class="img-circle sender-img m-r-xs" src="assets/images/profile-icon.png"> 
-                <a href="#">Kumar Sanket</a> to <a href="#">me</a> &nbsp;<i class="fa fa-caret-square-o-down"></i>
+                <a>{{ selectedEmail.sender }}</a> to 
+                <a>me</a> &nbsp;<i class="fa fa-caret-square-o-down"></i>
                 <small class="pull-right m-t-sm">
                   <i class="fa fa-paperclip"></i> &nbsp;<a href="javascript:;">(2)</a> &nbsp;&nbsp; Today 7:30 AM
                 </small>
               </div>
             </section>
-            
-            <div class="message-content">
-              <p>Hi Peter,</p>
-              <p>Thanks for the e-mail. It is always nice to hear from people, especially from you, Scott.</p>
-              <p>I have not got any reply, a positive or negative one, from Seibido yet.<br>Let's wait and hope that it will make a BOOK.</p>
-              <p>Have you finished your paperwork for Kaken and writing academic articles?<br>If you have some free time in the near future, I want to meet you and explain to you our next project.</p> 
-              <p>Why not drink out in Hiroshima if we are accepted?<br>We need to celebrate ourselves, don't we?<br>Let's have a small end-of-the-year party!</p> <p>Sincerely, K. Nakagawa</p>
+                       
+                       
+            <div class="message-content">            
+              <pre class="content">
+                {{ selectedEmail.body }}
+              </pre>
             </div>
             
             <div class="message-footer">
@@ -280,6 +148,133 @@ import {Component, ViewEncapsulation} from '@angular/core';
   `,
   styleUrls: ['components/mailer/mailer.style.css']
 })
-export class MailerWidget {
-  constructor() {}
+export class MailerWidget implements OnInit {
+  
+  selectedEmail;
+  emails = [
+    {
+      subject: 'Angular 2 NgConf Keynote',
+      date: '23rd May',
+      sender: 'Brad Green',
+      body: `
+      Hey team,
+      
+      I'm thinking we can get Angular2 RC ready for NgConf right?
+      
+      What do you think?
+      
+      Cheers,
+      Brad Green
+      The boss of the Father of AngularJS 
+      `
+    },
+    {
+      subject: 'Angular 2 Release Date',
+      date: '7th Jan',
+      sender: 'Brad Green',
+      body: `
+      Hey team,
+      
+      I'm thinking we can ship Angular 2 in anywhere between 
+      2 days and 2 years.
+      
+      What do you think?
+      
+      Cheers,
+      Brad Green
+      The boss of the Father of AngularJS      
+      `
+    },
+    {
+      subject: 'Invite: Angular 3 Planning Meeting',
+      date: '6th Jan',
+      sender: 'Papa Misko',
+      body: `
+      Hey team,
+      
+      I'm really excited for Angular 2, but I think it's time to 
+      start thinking about Angular 3.
+      
+      I'm thinking we kill off Components and switch from TypeScript to 
+      CoffeeScript.
+      
+      Let me know what you think.
+      
+      Misko Hevery a.k.a. Papa Misko      
+      `
+    },
+    {
+      subject: 'Delete all the tests?',
+      date: '6th Jan',
+      sender: 'David East',
+      body: `
+      Hey ngFolks,
+      
+      Testing is really hard, so I'm just going to delete all the 
+      .spec.ts files.
+      
+      Sound good? Great!      
+      
+       Let me know what you think.
+      
+      David East
+      Firebase all the things
+      `
+    },
+    {
+      subject: 'Router vs Router',
+      date: '6th Jan',
+      sender: 'Pete Bacon Darwin',
+      body: `
+      Hey everyone,
+      
+      Just a friendly reminder that the term is router, not router.
+      
+      Hope that clears everything up.
+      
+      Cheers,
+      Pete Bacon-Router Darwin
+      `
+    },
+    {
+      subject: 'Invitation: Your Deep Brain Stimulation Appointment',
+      date: '6th Jan',
+      sender: 'Dr Andres Lozano',
+      body: `
+      Hey Matias,
+      
+      We have you scheduled for this upcoming Friday at 9am.
+      
+      Remember to bring your tin-foil.
+      
+      Cheers,
+      Dr. Andres Lozano
+      `
+    },
+    {
+      subject: 'Test Email #1',
+      date: '20th Feb',
+      sender: 'Peter Drury',
+      body: [`
+      Dear Peter, 
+      
+      Good Day! Lorem ipsum dolor sit amet!
+      
+      I'm really excited for Angular 2, but I think it's time to start thinking about Angular 3.
+      
+      I'm thinking we kill off Components and switch from TypeScript to CoffeeScript.
+      
+      Let me know what you think.
+      
+      Peter Drury
+      `]
+    }
+  ];
+  constructor() {
+    this.selectedEmail = this.emails[0];
+  }
+  
+  ngOnInit(): void {
+    
+  }
 }
