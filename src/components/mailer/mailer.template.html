@@ -1,0 +1,139 @@
+<div class="mailer-container">
+  <div class="row">
+    <div class="col-lg-6 col-sm-12">
+      <div class="row" style="margin-left:0; margin-right:0;">
+        <div class="col-md-4 col-sm-4 inbox-container" style="padding:0;">
+          <div>
+            <div class="col email-options ps-container">
+              <div class="button-container">
+                <a href="javascript:void(0)" class="compose-btn">Compose</a>
+              </div>
+              <ul class="main-options">
+                <li class="activeli">
+                  <a href="javascript:void(0)">
+                    <span class="title"> &nbsp; Inbox</span>
+                    <span class="label label-pill label-primary label-middle pull-right">10</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0)">
+                    <span class="title"> &nbsp; Junk Mail</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0)">
+                    <span class="title"> &nbsp; Drafts</span>
+                    <span class="label label-pill label-danger label-middle pull-right">16</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0)">
+                    <span class="title"> &nbsp; Sent</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0)">
+                    <span class="title"> &nbsp; Trash</span>
+                  </a>
+                </li>
+                <hr class="poor">
+                <h5>LABELS</h5>
+                <li>
+                  <a href="javascript:void(0)">
+                    <span class="title"> &nbsp; Clients <i class="fa fa-stop pull-right faorange"></i></span>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0)">
+                    <span class="title"> &nbsp; Social <i class="fa fa-stop pull-right fayellow"></i></span>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0)">
+                    <span class="title"> &nbsp; Family <i class="fa fa-stop pull-right facyan"></i></span>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0)">
+                    <span class="title"> &nbsp; Friends <i class="fa fa-stop pull-right fapurple"></i></span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-4 messages-container" style="padding: 107px 0 0 0;">
+          <div>
+            <div class="searchbox">
+              <span class="sebox">Inbox</span> (14 unread) <i class="fa fa-envelope-o"></i>
+              <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Search Inbox...">
+            </div>
+
+            <div class="wrap-list">
+              <div class="messages-list">
+                <ul>
+                  <li class="messages-item"
+                      *ngFor="let email of emails"
+                      [class.active-message]="email === selectedEmail"
+                      (click)="selectedEmail = email"
+                  >
+                    <a>
+                      <div class="leftist"><i class="fa fa-star"></i>
+                        <label class="checkbox1" for="Option45">
+                          <input id="Option45" type="checkbox">
+                          <span></span>
+                        </label>
+                      </div>
+                      <span class="messages-item-subject">{{ email.sender }}</span>
+                      <span class="date-class text-muted pull-right"><i class="fa fa-paperclip"></i>&nbsp;{{ email.date }}</span>
+                        <span class="messages-item-content">
+                          <p>{{ email.subject }}</p>
+                        </span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6 col-sm-12 email-detail">
+      <div class="text-wrapper">
+        <div class="wrap-message"
+             *ngIf="selectedEmail"
+        >
+          <section>
+            <div class="message-topic">
+              <i class="fa fa-star m-r-xs text-primary"></i>
+              {{ selectedEmail.subject }}
+                <span class="pull-right text-muted">
+                  <a><i class="fa fa-reply"></i></a>
+                  <a><i class="fa fa-trash-o"></i></a>
+                </span>
+            </div>
+            <div class="message-sender">
+              <img class="img-circle sender-img m-r-xs" src="assets/images/profile-icon.png">
+              <a>{{ selectedEmail.sender }}</a> to
+              <a>me</a> &nbsp;<i class="fa fa-caret-square-o-down"></i>
+              <small class="pull-right m-t-sm">
+                <i class="fa fa-paperclip"></i> &nbsp;<a href="javascript:;">(2)</a> &nbsp;&nbsp; Today 7:30 AM
+              </small>
+            </div>
+          </section>
+
+
+          <div class="message-content">
+              <pre class="content">
+                {{ selectedEmail.body }}
+              </pre>
+          </div>
+
+          <div class="message-footer">
+            <button type="button" class="btn btn-primary btn-rounded pull-right"><i class="fa fa-reply"></i> Reply</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
