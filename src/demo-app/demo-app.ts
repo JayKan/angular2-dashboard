@@ -1,4 +1,5 @@
 import { Component, ViewEncapsulation } from '@angular/core';
+// import { Route, Routes, ROUTER_DIRECTIVES } from '@angular/router';
 import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from '@angular/router-deprecated';
 
 import { LoginComponent } from '../components/login/login';
@@ -7,12 +8,12 @@ import { DashboardComponent } from '../dashboard/dashboard';
 
 @Component({
   selector: 'demo-app',
+  encapsulation: ViewEncapsulation.None,
   template: `  
     <router-outlet></router-outlet>
   `,
   directives: [ROUTER_DIRECTIVES],
   providers: [ROUTER_PROVIDERS],
-  encapsulation: ViewEncapsulation.None,
   styles: [`
   body {
     font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;  

@@ -58,6 +58,15 @@
             </ul>
           </li>
 
+          <li [class.active]="isActive(['Widgets'])">
+            <a [routerLink]="['Widgets']">
+              <i class="fa fa-cloud-download"></i>
+            </a>
+            <ul class="nested-dropdown animated">
+              <li><a [routerLink]="['Widgets']">UI Widgets</a></li>
+            </ul>
+          </li>
+
         </ul>
       </div>
     </div>

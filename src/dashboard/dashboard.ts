@@ -7,6 +7,7 @@ import { ChartsView } from '../pages/charts/charts';
 import { TablesView } from '../pages/tables/tables';
 import { GridsView } from '../pages/grids/grids';
 import { MailView } from '../pages/mails/mails';
+import { WidgetsView } from '../pages/widgets/widgets';
 
 @Component({
   selector: 'dashboard',
@@ -42,7 +43,8 @@ import { MailView } from '../pages/mails/mails';
   { path: '/charts',      component: ChartsView,      name: 'Charts'                          },
   { path: '/tables',      component: TablesView,      name: 'Tables'                          },
   { path: '/grids',       component: GridsView,       name: 'Grids'                           },
-  { path: '/mail',        component: MailView,        name: 'Mail'                            }
+  { path: '/mail',        component: MailView,        name: 'Mail'                            },
+  { path: '/widgets',     component: WidgetsView,     name: 'Widgets'                         }
 ])
 export class DashboardComponent {
 
