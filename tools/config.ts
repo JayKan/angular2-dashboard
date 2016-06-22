@@ -59,6 +59,8 @@ export const DEV_NPM_DEPENDENCIES: InjectableDependency[] = normalizeDependencie
   { src: 'c3/c3.js',                                                inject: 'libs',   dest: JS_DEST    },
   { src: 'perfect-scrollbar/dist/css/perfect-scrollbar.css',        inject: true,     dest: CSS_DEST   },
   { src: 'perfect-scrollbar/dist/js/perfect-scrollbar.jquery.js',   inject: 'libs',   dest: JS_DEST    },
+  // { src: 'angular2-toaster/lib/toaster.css',                        inject: true,     dest: CSS_DEST   },
+  // { src: 'ng2-toastr/bundles/ng2-toastr.min.css',                   inject: true,     dest: CSS_DEST   },
 ]);
 
 export const PROD_NPM_DEPENDENCIES: InjectableDependency[] = normalizeDependencies([

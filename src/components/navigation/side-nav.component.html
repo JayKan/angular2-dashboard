@@ -67,6 +67,14 @@
             </ul>
           </li>
 
+          <li [class.active]="isActive(['Timeline'])">
+            <a [routerLink]="['Timeline']">
+              <i class="fa fa-building-o"></i>
+            </a>
+            <ul class="nested-dropdown animated">
+              <li><a [routerLink]="['Timeline']">Timeline</a></li>
+            </ul>
+          </li>
         </ul>
       </div>
     </div>

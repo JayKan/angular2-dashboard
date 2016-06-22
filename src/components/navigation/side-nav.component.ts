@@ -33,7 +33,7 @@ export class SideNavComponent implements OnInit {
       }
     });
   }
-
+  
   isActive(instruction: string[]): boolean {
     return this._route.isRouteActive(this._route.generate(instruction));
   }

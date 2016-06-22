@@ -8,6 +8,7 @@ import { TablesView } from '../pages/tables/tables';
 import { GridsView } from '../pages/grids/grids';
 import { MailView } from '../pages/mails/mails';
 import { WidgetsView } from '../pages/widgets/widgets';
+import { TimelineView } from '../pages/timeline/timeline';
 
 @Component({
   selector: 'dashboard',
@@ -16,7 +17,7 @@ import { WidgetsView } from '../pages/widgets/widgets';
     <side-nav></side-nav>
     <section class="main-container">     
       <router-outlet></router-outlet>
-    </section>
+    </section>      
   `,
   directives: [ROUTER_DIRECTIVES, TopNavComponent, SideNavComponent],
   encapsulation: ViewEncapsulation.None,
@@ -44,9 +45,11 @@ import { WidgetsView } from '../pages/widgets/widgets';
   { path: '/tables',      component: TablesView,      name: 'Tables'                          },
   { path: '/grids',       component: GridsView,       name: 'Grids'                           },
   { path: '/mail',        component: MailView,        name: 'Mail'                            },
-  { path: '/widgets',     component: WidgetsView,     name: 'Widgets'                         }
+  { path: '/widgets',     component: WidgetsView,     name: 'Widgets'                         },
+  { path: '/timeline',    component: TimelineView,    name: 'Timeline'                        }
 ])
 export class DashboardComponent {
 
   constructor() {}
+  
 }

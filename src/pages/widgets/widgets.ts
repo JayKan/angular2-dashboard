@@ -6,6 +6,7 @@ export interface IBoard {
   title: string;
   content: string;
 }
+
 @Component({
   selector: 'ui-widgets-view',
   encapsulation: ViewEncapsulation.None,
@@ -22,7 +23,7 @@ export interface IBoard {
   // Here, you can see that the template is hooking into those variables using the
   // "let" syntax, ex. "let-color=item".
   template: `
-  <h4>UI Widgets View</h4>
+  <h4>Dashboard@Widgets</h4>
   <dynamic-repeater [items]="boards">    
     <template #itemRenderer let-item="item" let-index="index">      
       <div title="Item {{ index }}">
@@ -37,6 +38,7 @@ export interface IBoard {
 })
 export class WidgetsView {
   boards: IBoard[];
+  isShowingWidget: boolean = false;
   constructor() {
     this.boards = [
       { date: '12:03:28 12-04-2014', title: 'Long established fact', content: 'The years, sometimes by accident, sometimes on purpose (injected humour and the like).' },
@@ -46,5 +48,9 @@ export class WidgetsView {
       { date: '5:20:11 4-04-2014', title: 'Contrary to popular belief', content: 'Hampden-Sydney College in Virginia, looked up one.' },
       { date: '2:10:12 4-05-2014', title: 'There are many variations', content: 'All the Lorem Ipsum generators on the Internet .' }
     ]
+  }
+  
+  toggle(): void {
+    this.isShowingWidget = !this.isShowingWidget;
   }
 }

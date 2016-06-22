@@ -5,6 +5,7 @@ import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from '@angular/route
 import { LoginComponent } from '../components/login/login';
 import { RegistrationComponent } from '../components/registration/registartion';
 import { DashboardComponent } from '../dashboard/dashboard';
+// import { ToastsManager } from 'ng2-toastr/ng2-toastr';
 
 @Component({
   selector: 'demo-app',
