@@ -20,6 +20,7 @@ import { TimelineView } from '../pages/timeline/timeline';
     </section>      
   `,
   directives: [ROUTER_DIRECTIVES, TopNavComponent, SideNavComponent],
+  providers: [],
   encapsulation: ViewEncapsulation.None,
   styles: [`
      .main-container {
