@@ -4,7 +4,7 @@
   "description": "Angular2 admin dashboard application",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "demo-app": "gulp serve.dev"
+    "start": "gulp serve.dev"
   },
   "author": "Jay Kan",
   "license": "MIT",
@@ -38,6 +38,7 @@
     "zone.js": "^0.6.10"
   },
   "devDependencies": {
+    "d3": "~3.5.0",
     "async": "^1.4.2",
     "browser-sync": "^2.11.1",
     "chalk": "^1.1.1",
