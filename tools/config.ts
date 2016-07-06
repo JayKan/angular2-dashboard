@@ -55,7 +55,7 @@ export const DEV_NPM_DEPENDENCIES: InjectableDependency[] = normalizeDependencie
   { src: 'fullcalendar/dist/fullcalendar.min.js',                   inject: 'libs',   dest: JS_DEST    },
   { src: 'fullcalendar/dist/fullcalendar.min.css',                  inject: true,     dest: CSS_DEST   },
   { src: 'c3/c3.css',                                               inject: true,     dest: CSS_DEST   },
-  { src: 'c3/node_modules/d3/d3.js',                                inject: 'libs',   dest: JS_DEST    },
+  { src: 'd3/d3.min.js',                                            inject: 'libs',   dest: JS_DEST    },
   { src: 'c3/c3.js',                                                inject: 'libs',   dest: JS_DEST    },
   { src: 'perfect-scrollbar/dist/css/perfect-scrollbar.css',        inject: true,     dest: CSS_DEST   },
   { src: 'perfect-scrollbar/dist/js/perfect-scrollbar.jquery.js',   inject: 'libs',   dest: JS_DEST    },
