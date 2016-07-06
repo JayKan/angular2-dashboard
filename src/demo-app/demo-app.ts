@@ -1,11 +1,10 @@
 import { Component, ViewEncapsulation } from '@angular/core';
-// import { Route, Routes, ROUTER_DIRECTIVES } from '@angular/router';
-import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from '@angular/router-deprecated';
+import {  ROUTER_PROVIDERS } from '@angular/router';
+import { RouteConfig, ROUTER_DIRECTIVES } from '@angular/router-deprecated';
 
 import { LoginComponent } from '../components/login/login';
 import { RegistrationComponent } from '../components/registration/registartion';
 import { DashboardComponent } from '../dashboard/dashboard';
-// import { ToastsManager } from 'ng2-toastr/ng2-toastr';
 
 @Component({
   selector: 'demo-app',

@@ -5,7 +5,6 @@
   var map = {
     'rxjs':                               "node_modules/rxjs",
     "angular2-toaster":                   "node_modules/angular2-toaster",
-    "ng2-toastr":                         "node_modules/ng2-toastr",
     '@angular':                           "node_modules/@angular",
     "@angular/core":                      "node_modules/@angular/core/index.js",
     "@angular/common":                    "node_modules/@angular/common/index.js",
@@ -25,9 +24,6 @@
         defaultExtension: 'js'
       },
       'angular2-toaster': {
-        defaultExtension: 'js'
-      },
-      'ng2-toastr': {
         defaultExtension: 'js'
       }
     }
