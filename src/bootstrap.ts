@@ -1,8 +1,12 @@
 import { bootstrap } from '@angular/platform-browser-dynamic';
+import { enableProdMode } from '@angular/core';
 import { DemoApp } from './demo-app/demo-app';
 import { ROUTER_PROVIDERS } from '@angular/router-deprecated';
 import { HTTP_PROVIDERS } from '@angular/http';
 import { CUSTOM_EVENTS_PLUGINS } from './plugins/plugins';
+
+// enable prod for faster renders
+enableProdMode();
 
 bootstrap(DemoApp, [
   ROUTER_PROVIDERS,
