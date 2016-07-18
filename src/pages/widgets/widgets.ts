@@ -1,5 +1,7 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component, ViewEncapsulation, OnInit } from '@angular/core';
 import { DynamicRepeaterComponent } from '../../components/dynamic-repeater/dynamic-repeater';
+import { Http } from '@angular/http';
+import 'rxjs/add/operator/map';
 
 export interface IBoard {
   date: string;
@@ -22,24 +24,12 @@ export interface IBoard {
   // --
   // Here, you can see that the template is hooking into those variables using the
   // "let" syntax, ex. "let-color=item".
-  template: `
-  <h4>Dashboard@Widgets</h4>
-  <dynamic-repeater [items]="boards">    
-    <template #itemRenderer let-item="item" let-index="index">      
-      <div title="Item {{ index }}">
-        <section><small>{{ item.date }}</small></section>       
-        <h4>{{ item.title }}</h4>
-        <p>{{ item.content }}</p>
-        <section class="bottom"><a><i class="fa fa-trash-o"></i></a></section>       
-      </div>
-    </template>
-  </dynamic-repeater>  
-  `
+  templateUrl: 'pages/widgets/widgets.template.html'
 })
-export class WidgetsView {
+export class WidgetsView implements OnInit {
   boards: IBoard[];
   isShowingWidget: boolean = false;
-  constructor() {
+  constructor(private _http: Http) {
     this.boards = [
       { date: '12:03:28 12-04-2014', title: 'Long established fact', content: 'The years, sometimes by accident, sometimes on purpose (injected humour and the like).' },
       { date: '11:08:33 16-04-2014', title: 'Latin professor at Hampden-Sydney ', content: 'The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.' },
@@ -49,7 +39,18 @@ export class WidgetsView {
       { date: '2:10:12 4-05-2014', title: 'There are many variations', content: 'All the Lorem Ipsum generators on the Internet .' }
     ]
   }
-  
+
+  ngOnInit(): void {
+    this._http
+      .get('https://powerful-spire-40053.herokuapp.com/check?url=http://kylefalconercodes.com')
+      .map(res => res.json())
+      .subscribe(
+        data => console.log('Yay got data: ', data),
+        error => console.log('Error: ', error),
+        () => console.log('Finally done!')
+      )
+  }
+
   toggle(): void {
     this.isShowingWidget = !this.isShowingWidget;
   }

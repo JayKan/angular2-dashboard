@@ -1,0 +1,11 @@
+<h4>Dashboard@Widgets</h4>
+<dynamic-repeater [items]="boards">
+  <template #itemRenderer let-item="item" let-index="index">
+    <div title="Item {{ index }}">
+      <section><small>{{ item.date }}</small></section>
+      <h4>{{ item.title }}</h4>
+      <p>{{ item.content }}</p>
+      <section class="bottom"><a><i class="fa fa-trash-o"></i></a></section>
+    </div>
+  </template>
+</dynamic-repeater>
