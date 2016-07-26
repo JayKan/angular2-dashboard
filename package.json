@@ -22,6 +22,7 @@
     "@angular/router": "2.0.0-rc.2",
     "@angular/router-deprecated": "2.0.0-rc.2",
     "@angular/upgrade": "2.0.0-rc.4",
+    "@angular2-material/core": "2.0.0-alpha.5-2",
 
     "c3": "^0.4.11-rc4",
     "chart.js": "^2.0.2",

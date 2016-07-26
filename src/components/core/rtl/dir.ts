@@ -1,6 +1,6 @@
 import  { Directive, HostBinding, Output, Input, EventEmitter } from '@angular/core';
 
-export type LayoutDirection = 'ltr' | 'rtl';
+export declare type LayoutDirection = 'ltr' | 'rtl';
 
 /**
  * Directive to listen to changes of direction of part of the DOM.
