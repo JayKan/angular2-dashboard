@@ -1,5 +1,6 @@
 ;(function() {
   'use strict';
+
   
   // map tells the System loader where to look for things
   var map = {
@@ -13,7 +14,8 @@
     "@angular/platform-browser":          "node_modules/@angular/platform-browser/index.js",
     "@angular/platform-browser-dynamic":  "node_modules/@angular/platform-browser-dynamic/index.js",
     "@angular/router-deprecated":         "node_modules/@angular/router-deprecated/index.js",
-    "@angular/router":                    "node_modules/@angular/router/index.js"
+    "@angular/router":                    "node_modules/@angular/router/index.js",
+    "@angular2-material":                 "node_modules/@angular2-material",
   };
 
   var config = {
@@ -25,6 +27,11 @@
       },
       'angular2-toaster': {
         defaultExtension: 'js'
+      },
+      '@angular2-material/core': {
+        defaultExtension: 'js',
+        format: 'cjs',
+        main: 'core'
       }
     }
   };
