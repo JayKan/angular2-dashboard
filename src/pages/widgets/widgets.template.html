@@ -9,3 +9,13 @@
     </div>
   </template>
 </dynamic-repeater>
+
+<md-dialog #alert>
+  <md-dialog-title>This is an alert title</md-dialog-title>
+  You can specify some description text in here
+  <md-dialog-actions ok="Got It"></md-dialog-actions>
+</md-dialog>
+
+<button class="btn btn-default" (click)="alert.show()" flex="auto">
+  Alert Dialog
+</button>

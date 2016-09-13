@@ -2,17 +2,19 @@ import { Component, ViewEncapsulation, OnInit } from '@angular/core';
 import { DynamicRepeaterComponent } from '../../components/dynamic-repeater/dynamic-repeater';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
+import { OVERLAY_PROVIDERS } from '../../components/core/overlay/overlay';
+import { DIALOG_DIRECTIVES } from '../../components/dialog/index';
 
 export interface IBoard {
   date: string;
   title: string;
   content: string;
 }
-
 @Component({
   selector: 'ui-widgets-view',
   encapsulation: ViewEncapsulation.None,
-  directives: [ DynamicRepeaterComponent ],
+  directives: [DynamicRepeaterComponent],
+  providers: [OVERLAY_PROVIDERS],
   // In this view, we're passing a dynamic TemplateRef to the DynamicRepeater
   // component. We're not passing it in like a property; rather, we're "tagging" it
   // with the "#itemRenderer" handle. Then, the DynamicRepeater is going to query its
@@ -41,17 +43,34 @@ export class WidgetsView implements OnInit {
   }
 
   ngOnInit(): void {
-    this._http
-      .get('https://powerful-spire-40053.herokuapp.com/check?url=http://kylefalconercodes.com')
-      .map(res => res.json())
-      .subscribe(
-        data => console.log('Yay got data: ', data),
-        error => console.log('Error: ', error),
-        () => console.log('Finally done!')
-      )
+    // this._http
+    //   .get('https://powerful-spire-40053.herokuapp.com/check?url=http://kylefalconercodes.com')
+    //   .map(res => res.json())
+    //   .subscribe(
+    //     data => console.log('Yay got data: ', data),
+    //     error => console.log('Error: ', error),
+    //     () => console.log('Finally done!')
+    //   )
   }
 
   toggle(): void {
     this.isShowingWidget = !this.isShowingWidget;
+  }
+  status: string = '';
+
+  confirmClose(forgiveDebt: boolean) {
+    if (forgiveDebt) {
+      this.status = 'You decided to get rid of your debt.';
+    } else {
+      this.status = 'You decided to keep your debt.';
+    }
+  }
+
+  customClose(interesting: boolean) {
+    if (interesting) {
+      this.status = 'That article was interesting.';
+    } else {
+      this.status = 'Look for something else.';
+    }
   }
 }
