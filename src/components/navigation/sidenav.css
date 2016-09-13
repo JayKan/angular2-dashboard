@@ -1,0 +1,181 @@
+:host {
+    position: relative;
+    -webkit-transform: translate3D(0, 0, 0);
+    transform: translate3D(0, 0, 0);
+    box-sizing: border-box;
+    display: block;
+    overflow-x: hidden;
+}
+
+:host[fullscreen] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+:host[fullscreen].md-sidenav-opened {
+    overflow: hidden;
+}
+
+:host > .md-sidenav-backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    z-index: 2;
+    visibility: hidden;
+}
+
+:host > .md-sidenav-backdrop.md-sidenav-shown {
+    visibility: visible;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+:host > md-content {
+    position: relative;
+    -webkit-transform: translate3D(0, 0, 0);
+    transform: translate3D(0, 0, 0);
+    display: block;
+}
+
+:host > md-sidenav {
+    position: relative;
+    -webkit-transform: translate3D(0, 0, 0);
+    transform: translate3D(0, 0, 0);
+    display: block;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    z-index: 3;
+    min-width: 5%;
+    overflow-y: auto;
+    background-color: white;
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+}
+
+:host > md-sidenav.md-sidenav-closed {
+    visibility: hidden;
+}
+
+:host > md-sidenav.md-sidenav-closing {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+    will-change: transform;
+}
+
+:host > md-sidenav.md-sidenav-opening {
+    box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+    visibility: visible;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    will-change: transform;
+}
+
+:host > md-sidenav.md-sidenav-opened {
+    box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+}
+
+:host > md-sidenav.md-sidenav-push {
+    background-color: white;
+}
+
+:host > md-sidenav.md-sidenav-side {
+    z-index: 1;
+}
+
+:host > md-sidenav.md-sidenav-end {
+    right: 0;
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+}
+
+:host > md-sidenav.md-sidenav-end.md-sidenav-closed {
+    visibility: hidden;
+}
+
+:host > md-sidenav.md-sidenav-end.md-sidenav-closing {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    will-change: transform;
+}
+
+:host > md-sidenav.md-sidenav-end.md-sidenav-opening {
+    box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+    visibility: visible;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    will-change: transform;
+}
+
+:host > md-sidenav.md-sidenav-end.md-sidenav-opened {
+    box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+}
+
+:host-context([dir="rtl"]) > md-sidenav {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+}
+
+:host-context([dir="rtl"]) > md-sidenav.md-sidenav-closed {
+    visibility: hidden;
+}
+
+:host-context([dir="rtl"]) > md-sidenav.md-sidenav-closing {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    will-change: transform;
+}
+
+:host-context([dir="rtl"]) > md-sidenav.md-sidenav-opening {
+    box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+    visibility: visible;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    will-change: transform;
+}
+
+:host-context([dir="rtl"]) > md-sidenav.md-sidenav-opened {
+    box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+}
+
+:host-context([dir="rtl"]) > md-sidenav.md-sidenav-end {
+    left: 0;
+    right: auto;
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+}
+
+:host-context([dir="rtl"]) > md-sidenav.md-sidenav-end.md-sidenav-closed {
+    visibility: hidden;
+}
+
+:host-context([dir="rtl"]) > md-sidenav.md-sidenav-end.md-sidenav-closing {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+    will-change: transform;
+}
+
+:host-context([dir="rtl"]) > md-sidenav.md-sidenav-end.md-sidenav-opening {
+    box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+    visibility: visible;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    will-change: transform;
+}
+
+:host-context([dir="rtl"]) > md-sidenav.md-sidenav-end.md-sidenav-opened {
+    box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+}

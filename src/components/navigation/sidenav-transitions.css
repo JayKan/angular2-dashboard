@@ -1,0 +1,22 @@
+
+:host {
+    -webkit-transition: margin-left 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), margin-right 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition: margin-left 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), margin-right 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+:host > .md-sidenav-backdrop.md-sidenav-shown {
+    -webkit-transition: background-color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition: background-color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+:host > md-content {
+    -webkit-transition: margin-left 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), margin-right 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), left 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), right 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition: margin-left 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), margin-right 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), left 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), right 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+:host > md-sidenav {
+    -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition: -webkit-transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), -webkit-transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}

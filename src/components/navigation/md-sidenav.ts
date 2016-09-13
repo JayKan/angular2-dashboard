@@ -10,7 +10,8 @@ import {
   QueryList,
   ChangeDetectionStrategy,
   EventEmitter,
-  Renderer
+  Renderer,
+  Optional
 } from '@angular/core';
 import { NgStyle } from '@angular/common';
 import { Dir } from '../core/rtl/dir';
@@ -308,6 +309,15 @@ export class MdSidenavLayout implements AfterContentInit {
     }
   }
 
+  _isShowingBackdrop(): boolean {
+    return (this._isSidenavOpen(this._start) && this._start.mode !== 'side')
+      || (this._isSidenavOpen(this._end) && this._end.mode !== 'side');
+  }
+
+  private _isSidenavOpen(side: MdSidenav): boolean {
+    return side != null && side.opened;
+  }
+
   /**
    * Subscribes to sidenav events in order to set a class on the main layout element when the sidenav
    * is open and the backdrop is visible. This ensures any overflow on the layout element is properly
@@ -373,6 +383,6 @@ export class MdSidenavLayout implements AfterContentInit {
 }
 
 export const MD_SIDENAV_DIRECTIVES = [
-  MD_SIDENAV_DIRECTIVES,
+  MdSidenavLayout,
   MdSidenav
 ];
